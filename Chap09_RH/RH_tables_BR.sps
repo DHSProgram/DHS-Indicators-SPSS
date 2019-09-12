@@ -6,12 +6,12 @@ Author:				Ivana Bjelic
 Date last modified: July 17 2019 by Ivana Bjelic
 
 *Note this do file will produce the following tables in excel:
-	1. 	Tables_ANCvisits:	Contains the tables for ANC provider, ANC skilled provider, ANC number of visits, and timing of ANC visit by background variables
-	2.	Tables_ANCcomps: 	Contains tables for all ANC components
-  	3.	Tables_Probs: 	Contains the tables for problems accessing health care
-	4.	Tables_PNC:	Contains the tables for the PNC indicators for women and newborns
-	5.	Tables_Deliv:	Contains the tables for the delivery indicators
+Tables_Deliv:	Contains the tables for the delivery indicators
 ***********************************************************************************************************************************************************************************************************/
+
+*  When implementing a crosstabs command instead of ctables command please change:
+    ctables to *ctables.
+   *crosstabs to crosstabs.
 
 compute wt=v005/1000000.
 
@@ -42,6 +42,12 @@ ctables
   /titles title=
     "Live births in past 5 yrs by place of delivery".
 
+*crosstabs 
+    /tables = v025 v024 v106 v190 by rh_del_place 
+    /format = avalue tables
+    /cells = row 
+    /count asis.
+
 ****************************************************
 * type of health facilty.
 ctables
@@ -55,6 +61,12 @@ ctables
   /slabels visible=no
   /titles title=
     "Live births in past 5 yrs by place of delivery".
+
+*crosstabs 
+    /tables = v025 v024 v106 v190 by rh_del_pltype 
+    /format = avalue tables
+    /cells = row 
+    /count asis.
 
 ****************************************************
 * type of provider.
@@ -70,6 +82,13 @@ ctables
   /titles title=
     "Person providing assistance during delivery ".
 
+*crosstabs 
+    /tables = v025 v024 v106 v190 by rh_del_pv
+    /format = avalue tables
+    /cells = row 
+    /count asis.
+
+
 ****************************************************
 * skilled provider.
 ctables
@@ -83,6 +102,13 @@ ctables
   /slabels visible=no
   /titles title=
     "Skilled assistance during delivery".
+
+*crosstabs 
+    /tables = v025 v024 v106 v190 by rh_del_pvskill
+    /format = avalue tables
+    /cells = row 
+    /count asis.
+
 
 ****************************************************
 * C-section delivery.
@@ -98,6 +124,13 @@ ctables
   /titles title=
     "C-section delivery".
 
+*crosstabs 
+    /tables = v025 v024 v106 v190 by rh_del_ces
+    /format = avalue tables
+    /cells = row 
+    /count asis.
+
+
 ****************************************************
 * C-section delivery timing.
 ctables
@@ -112,6 +145,12 @@ ctables
   /titles title=
     "C-section delivery timing".
 
+*crosstabs 
+    /tables = v025 v024 v106 v190 by rh_del_cestime
+    /format = avalue tables
+    /cells = row 
+    /count asis.
+
 ****************************************************
 * Duration of stay after delivery.
 
@@ -125,6 +164,13 @@ ctables
   /slabels visible=no
   /titles title=
     "Duration of stay after delivery".
+
+*crosstabs 
+    /tables = rh_del_cestimeR by rh_del_stay
+    /format = avalue tables
+    /cells = row 
+    /count asis.
+
 
 ****************************************************.
 * Export Output.

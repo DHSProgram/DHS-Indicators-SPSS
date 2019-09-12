@@ -11,11 +11,11 @@
 *******************************************************************************************************************************
 
 *local user 39585	//change employee id number to personalize path.
-*cd "C:/Users//`user'//ICF/Analysis - Shared Resources/Code/DHS-Indicators-SPSS/Chap09_RH".
+cd  'C:/Users//33697/ICF/Analysis - Shared Resources/Code/DHS-Indicators-SPSS/Chap09_RH'.
 
 *.
 define datapath()
-    "C:/Users//`user'//ICF/Analysis - Shared Resources/Data/DHSdata"
+    "C:/Users/33697/ICF/Analysis - Shared Resources/Data/DHSdata"
 !enddefine.
 
 * select your survey.

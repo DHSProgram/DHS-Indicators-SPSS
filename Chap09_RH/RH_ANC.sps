@@ -5,7 +5,7 @@ Purpose: 			Code ANC indicators
 Data inputs: 		IR survey list
 Data outputs:		coded variables
 Author:				Ivana Bjelic
-Date last modified: June 29 2019 by Ivana Bjelic 
+Date last modified: Aug 22 2019 by Ivana Bjelic 
 *****************************************************************************************************/
 
  *----------------------------------------------------------------------------//
@@ -29,7 +29,6 @@ rh_anc_neotet		"Protected against neonatal tetanus"
 *** ANC visit indicators ***
 
 * ANC by type of provider.
-** Note: Please check the final report for this indicator to determine the categories and adjust the code and label accordingly. 
 do if (age < period).
 + if sysmis(m2a$1) = 0 rh_anc_pv = 6.
 + if m2f$1 = 1 or m2g$1 = 1 or m2h$1 = 1 or m2i$1 = 1 or m2j$1 = 1 or m2k$1 = 1 or m2l$1 = 1 or m2m$1 = 1 rh_anc_pv = 4.
@@ -48,7 +47,6 @@ value labels rh_anc_pv
 6 "No ANC".
 
 * ANC by skilled provider.
-** Note: Please check the final report for this indicator to determine what provider is considered skilled.
 do if (age < period).
 + recode rh_anc_pv (1 thru 3 = 1) (4, 5, 6 = 0) into rh_anc_pvskill.
 end if.
@@ -103,27 +101,27 @@ recode m13$1 (98,99=sysmis) (else=copy) into anctiming.
 ** 50% percentile.
 weight by v005.
 aggregate
-  /outfile = * mode=addvariables
+  /outfile = * mode=addvariables  overwrite = yes
   /break=
   /sp50=median(anctiming).
 	
-compute dummyU=$sysmis.
-if ancany=1 dummyU = 0.
-if anctiming<sp50 & ancany=1 dummyU = 1.
-aggregate
-  /outfile = * mode=addvariables
-  /break=
-  /sU=mean(dummyU).
-	
 compute dummyL=$sysmis.
 if ancany=1 dummyL = 0.
-if anctiming<=sp50 & ancany=1 dummyL = 1.
+if anctiming<sp50 & ancany=1 dummyL = 1.
 aggregate
-  /outfile = * mode=addvariables
+  /outfile = * mode=addvariables  overwrite = yes
   /break=
   /sL=mean(dummyL).
+	
+compute dummyU=$sysmis.
+if ancany=1 dummyU = 0.
+if anctiming<=sp50 & ancany=1 dummyU = 1.
+aggregate
+  /outfile = * mode=addvariables  overwrite = yes
+  /break=
+  /sU=mean(dummyU).
 
-compute rh_anc_median=(sp50-1)+((0.5-sL)/(sU-sL))+0.1.
+compute rh_anc_median=sp50+(0.5-sL)/(sU-sL).
 variable labels rh_anc_median "Total- Median months pregnant at first visit".
 	
 * Urban/Rural.
@@ -132,27 +130,27 @@ aggregate
   /break=v025
   /sp50urbrur=median(anctiming).
 	
-compute dummyUurbrur=$sysmis.
-if ancany=1 dummyUurbrur = 0.
-if anctiming<sp50 & ancany=1 dummyUurbrur = 1.
-aggregate
-  /outfile = * mode=addvariables
-  /break=v025
-  /sUurbrur=mean(dummyUurbrur).
-	
 compute dummyLurbrur=$sysmis.
 if ancany=1 dummyLurbrur = 0.
-if anctiming<=sp50 & ancany=1 dummyLurbrur = 1.
+if anctiming<sp50 & ancany=1 dummyLurbrur = 1.
 aggregate
   /outfile = * mode=addvariables
   /break=v025
   /sLurbrur=mean(dummyLurbrur).
+	
+compute dummyUurbrur=$sysmis.
+if ancany=1 dummyUurbrur = 0.
+if anctiming<=sp50 & ancany=1 dummyUurbrur = 1.
+aggregate
+  /outfile = * mode=addvariables
+  /break=v025
+  /sUurbrur=mean(dummyUurbrur).
 
 do if  v025=1.
-+ compute rh_anc_median_urban=(sp50urbrur-1)+((0.5-sLurbrur)/(sUurbrur-sLurbrur))+0.1.
++ compute rh_anc_median_urban=sp50urbrur+(0.5-sLurbrur)/(sUurbrur-sLurbrur).
 end if.
 do if  v025=2.
-+ compute rh_anc_median_rural=(sp50urbrur-1)+((0.5-sLurbrur)/(sUurbrur-sLurbrur))+0.1.
++ compute rh_anc_median_rural=sp50urbrur+(0.5-sLurbrur)/(sUurbrur-sLurbrur).
 end if.
 variable labels rh_anc_median_urban "Urban- Median months pregnant at first visit".
 variable labels rh_anc_median_rural "Rural- Median months pregnant at first visit".	

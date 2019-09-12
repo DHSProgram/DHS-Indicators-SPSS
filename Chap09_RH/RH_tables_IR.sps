@@ -10,8 +10,12 @@ Date last modified: July 16 2019 by Ivana Bjelic
 	2.	Tables_ANCcomps: 	Contains tables for all ANC components
   	3.	Tables_Probs: 	Contains the tables for problems accessing health care
 	4.	Tables_PNC:	Contains the tables for the PNC indicators for women and newborns
-	5.	Tables_Deliv:	Contains the tables for the delivery indicators
 ***********************************************************************************************************************************************************************************************************/
+
+*  When implementing a crosstabs command instead of ctables command please change:
+    ctables to *ctables.
+   *crosstabs to crosstabs
+   *frequencies to frequencies.
 
 compute wt=v005/1000000.
 
@@ -56,7 +60,13 @@ ctables
   /categories variables=all total=yes position=after label="Total"
   /slabels visible=no
   /titles title=
-    "Person providing assistance during ANC".								
+    "Person providing assistance during ANC".			
+
+*crosstabs 
+    /tables = v025 v024 v106 v190 by rh_anc_pv
+    /format = avalue tables
+    /cells = row 
+    /count asis.					
 	
 ****************************************************
 * Skilled assistance during ANC.
@@ -72,6 +82,12 @@ ctables
   /titles title=
     "Skilled assistance during ANC".	
 
+*crosstabs 
+    /tables = v025 v024 v106 v190 by rh_anc_pvskill
+    /format = avalue tables
+    /cells = row 
+    /count asis.	
+
 ****************************************************
 * Number of ANC visits in categories.
 ctables
@@ -86,6 +102,12 @@ ctables
   /titles title=
     "Number of ANC visits".
 
+*crosstabs 
+    /tables = v025 v024 v106 v190 by rh_anc_numvs
+    /format = avalue tables
+    /cells = row 
+    /count asis.
+
 * no table for rh_anc_4vs. 
 ****************************************************
 * Number of months pregnant before 1st ANC visit.
@@ -99,17 +121,26 @@ ctables
   /categories variables=all total=yes position=after label="Total"
   /slabels visible=no
   /titles title=
-    "Number of months pregnant before 1st ANC visit".	
+    "Number of months pregnant before 1st ANC visit".
+
+*crosstabs 
+    /tables = v025 v024 v106 v190 by rh_anc_moprg
+    /format = avalue tables
+    /cells = row 
+    /count asis.	
 
 * no table for rh_anc_4mo. 
 ****************************************************
 * Output for rh_ancmedian, rh_ancmedian_urban rh_ancmedian_rural.
 ctables
-  /table rh_anc_median  [s] [mean '' f5.1]  +  rh_anc_median_urban  [s] [mean '' f5.1]  + rh_anc_median_rural [s] [mean '' f5.1] 
+  /table rh_anc_median [s] [mean '' f5.1]  +  rh_anc_median_urban  [s] [mean '' f5.1]  + rh_anc_median_rural [s] [mean '' f5.1] 
   /categories variables=all empty=exclude missing=exclude
   /slabels visible=no
   /titles title=
     "Median number of months pregnant before 1st ANC visit".	
+
+*frequencies variables = rh_anc_median rh_anc_median_urban rh_anc_median_rural 
+         /statistics = mean.
 
 ****************************************************
 * Export Output.
@@ -136,6 +167,12 @@ ctables
   /slabels visible=no
   /titles title=
     "Took iron during pregnancy".
+
+*crosstabs 
+    /tables = v025 v024 v106 v190 by rh_anc_iron
+    /format = avalue tables
+    /cells = row 
+    /count asis.
 	
 ****************************************************
 * took intestinal parasite drugs during pregnacy.
@@ -151,6 +188,12 @@ ctables
   /titles title=
     "Took intestinal parasite drugs during pregnacy".
 
+*crosstabs 
+    /tables = v025 v024 v106 v190 by rh_anc_parast
+    /format = avalue tables
+    /cells = row 
+    /count asis.
+
 ****************************************************
 * told of pregnancy complications.
 ctables
@@ -164,6 +207,12 @@ ctables
   /slabels visible=no
   /titles title=
     "Told of pregnancy complications".
+
+*crosstabs 
+    /tables = v025 v024 v106 v190 by rh_anc_prgcomp
+    /format = avalue tables
+    /cells = row 
+    /count asis.
 
 ****************************************************
 * blood pressure was taken during ANC visit.
@@ -179,6 +228,12 @@ ctables
   /titles title=
     "Blood pressure was taken during ANC visit".
 
+*crosstabs 
+    /tables = v025 v024 v106 v190 by rh_anc_bldpres
+    /format = avalue tables
+    /cells = row 
+    /count asis.
+
 ****************************************************
 * urine sample taken during ANC visit.
 ctables
@@ -192,6 +247,13 @@ ctables
   /slabels visible=no
   /titles title=
     "Urine sample taken during ANC visit".
+
+*crosstabs 
+    /tables = v025 v024 v106 v190 by rh_anc_urine 
+    /format = avalue tables
+    /cells = row 
+    /count asis.
+
 
 ****************************************************
 * blood sample taken during ANC visit.
@@ -207,6 +269,12 @@ ctables
   /titles title=
     "Blood sample taken during ANC visit".
 
+*crosstabs 
+    /tables = v025 v024 v106 v190 by rh_anc_bldsamp
+    /format = avalue tables
+    /cells = row 
+    /count asis.
+
 ****************************************************
 * had 2+ tetanus injections.
 ctables
@@ -221,6 +289,12 @@ ctables
   /titles title=
     "Had 2+ tetanus injections".
 
+*crosstabs 
+    /tables = v025 v024 v106 v190 by rh_anc_toxinj
+    /format = avalue tables
+    /cells = row 
+    /count asis.
+
 ****************************************************
 * protected against neonatal tetanus.
 ctables
@@ -234,6 +308,12 @@ ctables
   /slabels visible=no
   /titles title=
     "Protected against neonatal tetanus".
+
+*crosstabs 
+    /tables = v025 v024 v106 v190 by rh_anc_neotet
+    /format = avalue tables
+    /cells = row 
+    /count asis.
 
 ****************************************************
 
@@ -262,6 +342,12 @@ ctables
   /titles title=
     "PNC timing for mother".
 
+*crosstabs 
+    /tables = v025 v024 v106 v190 by rh_pnc_wm_timing
+    /format = avalue tables
+    /cells = row 
+    /count asis.
+
 ****************************************************
 * PNC within 2days for mother.
 ctables
@@ -275,6 +361,12 @@ ctables
   /slabels visible=no
   /titles title=
     "PNC within 2days for mother".
+
+*crosstabs 
+    /tables = v025 v024 v106 v190 by rh_pnc_wm_2days
+    /format = avalue tables
+    /cells = row 
+    /count asis.
 
 ****************************************************
 * PNC provider for mother.
@@ -290,6 +382,12 @@ ctables
   /titles title=
     "PNC provider for mother".
 
+*crosstabs 
+    /tables = v025 v024 v106 v190 by rh_pnc_wm_pv
+    /format = avalue tables
+    /cells = row 
+    /count asis.
+
 ****************************************************
 * PNC timing for newborn.
 ctables
@@ -303,6 +401,12 @@ ctables
   /slabels visible=no
   /titles title=
     "PNC timing for newborn".
+
+*crosstabs 
+    /tables = v025 v024 v106 v190 by rh_pnc_nb_timing
+    /format = avalue tables
+    /cells = row 
+    /count asis.
 
 ****************************************************
 * PNC within 2 days for newborn.
@@ -318,6 +422,12 @@ ctables
   /titles title=
     "PNC within 2 days for newborn".
 
+*crosstabs 
+    /tables = v025 v024 v106 v190 by rh_pnc_nb_2days
+    /format = avalue tables
+    /cells = row 
+    /count asis.
+
 ****************************************************
 * PNC provider for newborn.
 ctables
@@ -331,6 +441,12 @@ ctables
   /slabels visible=no
   /titles title=
     "PNC provider for newborn".
+
+*crosstabs 
+    /tables = v025 v024 v106 v190 by rh_pnc_nb_pv
+    /format = avalue tables
+    /cells = row 
+    /count asis.
 
 ****************************************************
 * Export Output.
@@ -356,6 +472,12 @@ ctables
   /titles title=
     "Problem: Permission to go".
 
+*crosstabs 
+    /tables = v025 v024 v106 v190 by rh_prob_permit
+    /format = avalue tables
+    /cells = row 
+    /count asis.
+
 ****************************************************
 * problem getting money.
 ctables
@@ -369,6 +491,12 @@ ctables
   /slabels visible=no
   /titles title=
     "Problem: Getting money".
+
+*crosstabs 
+    /tables = v025 v024 v106 v190 by rh_prob_money 
+    /format = avalue tables
+    /cells = row 
+    /count asis.
 
 ****************************************************
 * problem distance.
@@ -384,6 +512,12 @@ ctables
   /titles title=
     "Problem: Distance".
 
+*crosstabs 
+    /tables = v025 v024 v106 v190 by rh_prob_dist
+    /format = avalue tables
+    /cells = row 
+    /count asis.
+
 ****************************************************
 * problem don't want to go alone.
 ctables
@@ -398,6 +532,12 @@ ctables
   /titles title=
     "Problem: Don't want to go alone".
 
+*crosstabs 
+    /tables = v025 v024 v106 v190 by rh_prob_alone
+    /format = avalue tables
+    /cells = row 
+    /count asis.
+
 ****************************************************
 * at least one problem.
 ctables
@@ -411,6 +551,12 @@ ctables
   /slabels visible=no
   /titles title=
     "At least one problem".
+
+*crosstabs 
+    /tables = v025 v024 v106 v190 by rh_prob_minone
+    /format = avalue tables
+    /cells = row 
+    /count asis.
 
 ****************************************************
 * Export Output.
