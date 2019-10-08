@@ -9,7 +9,7 @@ Date last modified:		September 25, 2019 by Ivana Bjelic
 
 *******************************************************************************************************************************.
 
-*** User information for internal DHS use. Please disregard and adjust change paths to your own. *** 
+*** User information for internal DHS use. Please disregard and adjust paths to your own. *** 
 
 *change working path.
  cd "C:/Users/39585/ICF/Analysis - Shared Resources/Code/DHS-Indicators-SPSS/Chap04_MS".

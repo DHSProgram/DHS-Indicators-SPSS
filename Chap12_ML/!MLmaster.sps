@@ -8,7 +8,7 @@ Purpose: 				Master file for the Malaria Chapter.
 Date last modified:		August 29, 2019 by Ivana Bjelic
 *******************************************************************************************************************************/
 
-*** User information for internal DHS use. Please disregard and adjust change paths to your own. *** 
+*** User information for internal DHS use. Please disregard and adjust paths to your own. *** 
 
 *local user 39585	//change employee id number to personalize path.
 cd "C:/Users/33697/ICF/Analysis - Shared Resources/Code/DHS-Indicators-SPSS/Chap12_ML".
