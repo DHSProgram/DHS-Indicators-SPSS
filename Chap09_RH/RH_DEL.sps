@@ -4,7 +4,7 @@ Program: 			RH_DEL.sps
 Purpose: 			Code Delivery Care indicators
 Data inputs: 		BR data files
 Data outputs:		coded variables
-Author:				Ivana Bjelic 
+Author:				Courtney Allen and translated to SPSS by Ivana Bjelic
 Date last modified: June 30 2019 by Ivana Bjelic			
 *****************************************************************************************************/
 

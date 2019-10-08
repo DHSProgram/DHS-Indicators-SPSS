@@ -4,7 +4,7 @@ Program: 			CH_ARI_FV.sps
 Purpose: 			Code ARI and fever variables
 Data inputs: 		KR survey list
 Data outputs:		coded variables
-Author:				Shireen Assaf
+Author:				Shireen Assaf and translated to SPSS by Ivana Bjelic
 Date last modified: September 01 by Ivana Bjelic
 Notes:				
 *****************************************************************************************************/
@@ -77,7 +77,8 @@ value labels ch_ari 0 "No" 1 "Yes".
 	
 *ARI care-seeking.
 *** this is country specific and the footnote for the final table needs to be checked to see what sources are included. 
-*** the code below only excludes and traditional practitioner (h32t). Some surveys also exclude pharmacies (h32k), shop (h32s) or other sources.
+*** The code below only excludes traditional practitioner (usually h32t). The variable for traditional healer may be different for different surveys (you can check this by: des h32*). 
+*** Some surveys also exclude pharmacies, shop, or other sources.
 do if b5<>0 and ch_ari=1.
 +compute ch_ari_care=0.
 +do repeat x= h32a h32b h32c h32d h32e h32f h32g h32h h32i h32j h32k h32l h32m h32n h32o h32p h32q h32r h32s h32u h32v h32w h32x.
@@ -211,7 +212,8 @@ value labels ch_fever 0 "No" 1 "Yes".
 	
 *Fever care-seeking
 *** this is country specific and the footnote for the final table needs to be checked to see what sources are included. 
-*** the code below only excludes traditional practitioner (h32t). Some surveys also exclude pharmacies (h32k), shop (h32s) or other sources.
+*** The code below only excludes traditional practitioner (usually h32t). The variable for traditional healer may be different for different surveys (you can check this by: des h32*). 
+*** Some surveys also exclude pharmacies, shop, or other sources.
 do if b5<>0 and ch_fever=1.
 +compute ch_fev_care=0.
 +do repeat x=h32a h32b h32c h32d h32e h32f h32g h32h h32i h32j h32k h32l h32m h32n h32o h32p h32q h32r h32s h32u h32v h32w h32x.

@@ -2,7 +2,7 @@
 *****************************************************************************************************
  * Program: 			RH_age_period_BR.sps
  * Purpose: 			compute the age variable and set the period for the analysis
- * Author:				Ivana Bjelic
+ * Author:			Shireen Assaf and translated to SPSS by Ivana Bjelic
  * Date last modified: 07/16/2019 by Ivana Bjelic
 
  * Notes: 				Choose reference period to select last 2 years or last 5 years

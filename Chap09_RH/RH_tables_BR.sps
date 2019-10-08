@@ -2,7 +2,7 @@
  *************************************************************************************************************************************************************************************************************
 Program: 			RH_tables_BR.sps
 Purpose: 			produce tables for indicators
-Author:				Ivana Bjelic
+Author:			 Ivana Bjelic
 Date last modified: July 17 2019 by Ivana Bjelic
 
 *Note this do file will produce the following tables in excel:

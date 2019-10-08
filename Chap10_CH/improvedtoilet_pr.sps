@@ -4,7 +4,7 @@ program: 			improvedtoilet_allcountries.sps
 Purpose: 			creates variable for binary improved sanitation according to JSTOR standard 
 Data inputs: 		pr file
 Data outputs:		none
-Author of do file:	03/15/2018	Courtney Allen
+Author of do file:	03/15/2018	Courtney Allen, translated to SPSS by Ivana Bjelic
 Date last moddo ified:         09/03/2019 by Ivana Bjelic                                                          
                                                                                           04/16/2018	Courtney Allen - to use a filename var
 					05/08/2018	Courtney Allen - to use new codes 10, 15, 16

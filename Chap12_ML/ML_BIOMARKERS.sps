@@ -4,7 +4,7 @@ Program: 			ML_BIOMARKERS.sps
 Purpose: 			Code anemia and malaria testing prevalence in children under 5
 Data inputs: 		PR survey list
 Data outputs:		coded variables
-Author:				Cameron Taylor and Shireen Assaf
+Author:				Cameron Taylor and Shireen Assaf, translated to SPSS by Ivana Bjelic
 Date last modified: August 28 2019 by Ivana Bjelic
 *****************************************************************************************************
 

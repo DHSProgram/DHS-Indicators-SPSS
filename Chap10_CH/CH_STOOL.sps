@@ -4,7 +4,7 @@ Program: 			CH_STOOL.sps
 Purpose: 			Code disposal of child's stook variable
 Data inputs: 		KR survey list
 Data outputs:		coded variables
-Author:				Shireen Assaf
+Author:				Shireen Assaf and translated to SPSS by Ivana Bjelic
 Date last modified: September 06 2019 by Ivana Bjelic
 Notes:				This sps file will drop cases. 
  * 					This is because the denominator is the youngest child under age 2 living with the mother. 			

@@ -2,7 +2,7 @@
 *******************************************************************************************************
 Program: 			ML_tables_PR.sps
 Purpose: 			produce tables for indicators
-Author:				Cameron Taylor
+Author:				Ivana Bjelic
 Date last modified: August 31 2019 by Ivana Bjelic
 
 *Note this do file will produce the following tables in excel:

@@ -4,7 +4,7 @@ Program: 			improvedwater_pr.sps
 Purpose: 			creates variable for binary improved water source according to JSTOR standard 
 Data inputs: 		pr
 Data outputs:		none
-Author of do file:	04/08/2018	Courtney Allen
+Author of do file:	04/08/2018	Courtney Allen, translated to SPSS by Ivana Bjelic
 Date last modified:    09/03/2019 by Ivana Bjelic                                                           
                                                                                           04/16/2018	Courtney Allen to use filename var
 					01/28/2019	Courtney Allen included most recent surveys

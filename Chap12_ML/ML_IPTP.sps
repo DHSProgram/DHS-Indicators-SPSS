@@ -4,7 +4,7 @@ Program: 			ML_IPTP.do
 Purpose: 			Code malaria IPTP indicators
 Data inputs: 		IR survey list
 Data outputs:		coded variables
-Author:				Cameron Taylor and Shireen Assaf
+Author:				Cameron Taylor and Shireen Assaf, , translated to SPSS by Ivana Bjelic
 Date last modified: August 31 by Ivana Bjelic
 *****************************************************************************************************.
 

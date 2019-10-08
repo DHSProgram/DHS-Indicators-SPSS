@@ -4,7 +4,7 @@ Program: 			ML_NETS_HH.sps
 Purpose: 			Code indicators for household ITN ownership
 Data inputs: 		HR survey list
 Data outputs:		coded variables
-Author:				Cameron Taylor 
+Author:				Cameron Taylor and translated to SPSS by Ivana Bjelic
 Date last modified: August 30 2019 by Ivana Bjelic
 *****************************************************************************************************.
 

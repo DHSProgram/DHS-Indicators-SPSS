@@ -4,7 +4,7 @@ Program: 			CH_DIAR.sps
 Purpose: 			Code diarrhea variables
 Data inputs: 		KR survey list
 Data outputs:		coded variables
-Author:				Shireen Assaf
+Author:				Shireen Assaf and translated to SPSS by Ivana Bjelic
 Date last modified: September 02 2019 by Ivana Bjelic
 Notes:				
 *****************************************************************************************************.
@@ -58,10 +58,11 @@ value labels ch_diar 0 "No" 1 "Yes".
 
 *Diarrhea treatment.
 *** this is country specific and the footnote for the final table needs to be checked to see what sources are included. 
-*** the code below only excludes traditional practitioner (h12t). Some surveys also exclude pharmacies (h12k), shop (h12s) or other sources.
+*** The code below only excludes traditional practitioner (usually h12t). The variable for traditional healer may be different for different surveys (you can check this by: des h12*). 
+*** Some surveys also exclude pharmacies, shop, or other sources.
 do if b5<>0 and ch_diar=1.
 +compute ch_diar_care=0.
-+do repeat x=h12a to h12x.
++do repeat x=h12a h12b h12c h12d h12e h12f h12g h12h h12i h12j h12k h12l h12m h12n h12o h12p h12q h12r h12s h12u h12v h12w h12x.
 +  if x=1 ch_diar_care=1.
 +end repeat.
 * If you want to also remove pharmacy for example as a source of treatment (country specific condition) you can remove.

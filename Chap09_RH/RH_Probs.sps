@@ -4,7 +4,7 @@ Program: 			RH_probs.sps
 Purpose: 			Code indicators on problems accessing health care for women
 Data inputs: 		IR survey list
 Data outputs:		coded variables
-Author:				Ivana Bjelic
+Author:				Shireen Assaf and translated to SPSS by Ivana Bjelic
 Date last modified: June 30, 2019 by Ivana Bjelic
 *****************************************************************************************************/
 

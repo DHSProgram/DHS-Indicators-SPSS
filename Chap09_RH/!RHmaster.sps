@@ -5,13 +5,15 @@
  * Purpose: 				Master file for the Reporductive Health Chapter 
 						The master file will call other do files that will produce the RH indicators and produce tables
  * Data outputs:			coded variables and table output on screen and in excel tables
- * Author: 				Ivana Bjelic
+ * Author: 				Shireen Assaf and translated to SPSS by Ivana Bjelic
  * Date last modified:	                06/26/2019 by Ivana Bjelic
  * Notes:		                                                                                                                           	
 *******************************************************************************************************************************
 
+*** User information for internal DHS use. Please disregard and adjust change paths to your own. *** 
+
 *local user 39585	//change employee id number to personalize path.
-cd  'C:/Users//33697/ICF/Analysis - Shared Resources/Code/DHS-Indicators-SPSS/Chap09_RH'.
+cd "C:\Users\33697\ICF/Analysis - Shared Resources\Code\DHS-Indicators-SPSS\Chap09_RH".
 
 *.
 define datapath()

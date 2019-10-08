@@ -2,7 +2,7 @@
 ******************************************************************************************************
 Program: 			CH_tables_IR.sps
 Purpose: 			produce tables for indicators
-Author:				Shireen Assaf
+Author:				Shireen Assaf and translated to SPSS by Ivana Bjelic
 Date last modified: September 01 2019 by Ivana Bjelic
 
 *Note this do file will produce the following tables in excel:

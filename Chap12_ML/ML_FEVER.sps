@@ -4,7 +4,7 @@ Program: 			ML_FEVER.sps
 Purpose: 			Code indicators on fever, fever care-seeking, and antimalarial drugs
 Data inputs: 		KR survey list
 Data outputs:		coded variables
-Author:			Shireen Assaf and Cameron Taylor
+Author:			Shireen Assaf and Cameron Taylor, , translated to SPSS by Ivana Bjelic
 Date last modified: August 31 by Ivana Bjelic
 Notes:			There are similarities between the fever code in this do file and the ARI/Fever code for Chapter 10
 			Several indicators (on care and specific antimalarial drugs) are country specific. Please see notes in the code.

@@ -3,7 +3,7 @@
 ****************************************************************************************************
 Program: 			CH_tables_vac.sps
 Purpose: 			produce tables for vaccination indicators
-Author:				Shireen Assaf
+Author:				Ivana Bjelic
 Date last modified: September 02 2019 by Ivana Bjelic
 
 *Note this do file will produce the following tables in excel:

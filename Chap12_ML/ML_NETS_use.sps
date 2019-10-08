@@ -4,7 +4,7 @@ Program: 			ML_NETS_use.sps
 Purpose: 			POPULATION/CHILD/PREGNANT WOMEN USE OF NETS
 Data inputs: 		PR survey list
 Data outputs:		coded variables
-Author:				Cameron Taylor
+Author:				Cameron Taylor and translated to SPSS by Ivana Bjelic
 Date last modified: August 31 2019 by Ivana Bjelic
 *****************************************************************************************************/
 
