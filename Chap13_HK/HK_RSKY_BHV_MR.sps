@@ -68,8 +68,8 @@ value labels  hk_cond_2plus 0"No" 1"Yes".
 if hk_sex_notprtnr=1 hk_cond_notprtnr=0.
 *see risk1, risk2, and risk3 variables above.
 if risk1=1 & mv761=1 hk_cond_notprtnr=1.
-if risk1=0 & risk2=1 & mv761b=1 hk_cond_notprtnr=1.
-if risk1=0 & risk2=0 & risk3=1 & mv761c=1 hk_cond_notprtnr=1.
+if risk1<>1 & risk2=1 & mv761b=1 hk_cond_notprtnr=1.
+if risk1<>1 & risk2<>1 & risk3=1 & mv761c=1 hk_cond_notprtnr=1.
 variable labels hk_cond_notprtnr "Used a condom at last sex with a partner that is not their spouse and does not live with them in the past 12 months".
 value labels  hk_cond_notprtnr 0"No" 1"Yes".
 
