@@ -1,9 +1,9 @@
 * Encoding: windows-1252.
 * Encoding: .
 *******************************************************************************************************************************.
- * Program: 				RHmaster.sps
- * Purpose: 				Master file for the Reporductive Health Chapter 
-						The master file will call other do files that will produce the RH indicators and produce tables
+ * Program: 				RHmain.sps
+ * Purpose: 				Main file for the Reporductive Health Chapter 
+						The main file will call other do files that will produce the RH indicators and produce tables
  * Data outputs:			coded variables and table output on screen and in excel tables
  * Author: 				Shireen Assaf and translated to SPSS by Ivana Bjelic
  * Date last modified:	                06/26/2019 by Ivana Bjelic

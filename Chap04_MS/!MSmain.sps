@@ -1,8 +1,8 @@
 * Encoding: windows-1252.
 *******************************************************************************************************************************
-Program: 				MSmaster.do
-Purpose: 				Master file for the Marriage and Sexual Activity Chapter 
-					The master file will call other do files that will produce the MS indicators and produce tables
+Program: 				MSmain.do
+Purpose: 				Main file for the Marriage and Sexual Activity Chapter 
+					The main file will call other do files that will produce the MS indicators and produce tables
 Data outputs:			coded variables and table output on screen and in excel tables
 Author: 				Courtney Allen and translated to SPSS by Ivana Bjelic
 Date last modified:		September 25, 2019 by Ivana Bjelic

@@ -1,8 +1,8 @@
 * Encoding: windows-1252.
 *******************************************************************************************************************************
-Program: 				CHmaster.sps
-Purpose: 				Master file for the Child Health Chapter. 
- * 						The master file will call other do files that will produce the CH indicators and produce tables
+Program: 				CHmain.sps
+Purpose: 				Main file for the Child Health Chapter. 
+ * 						The main file will call other do files that will produce the CH indicators and produce tables
 Data outputs:			coded variables and table output on screen and in excel tables
 Author: 				Shireen Assaf and translated to SPSS by Ivana Bjelic
 Date last modified:		September 01 2019 by Ivana Bjelic

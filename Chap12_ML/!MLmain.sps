@@ -1,8 +1,8 @@
 * Encoding: windows-1252.
  * /*******************************************************************************************************************************
-Program: 				MLmaster.sps
-Purpose: 				Master file for the Malaria Chapter. 
- * 						The master file will call other do files that will produce the ML indicators and produce tables.
+Program: 				MLmain.sps
+Purpose: 				Main file for the Malaria Chapter. 
+ * 						The main file will call other do files that will produce the ML indicators and produce tables.
  * Data outputs:			coded variables and table output on screen and in excel tables.  
  * Author: 				Shireen Assaf and translated to SPSS by Ivana Bjelic	
 Date last modified:		August 29, 2019 by Ivana Bjelic
@@ -20,23 +20,23 @@ define datapath()
 * select your survey.
 * HR Files.
 define hrdata()
-    "UGHR60FL"
+    "SNHR7HFL"
 !enddefine.
 * GHHR7BFL.
 
 * PR Files.
 define prdata()
-    "UGPR60FL"
+    "SNPR7HFL"
 !enddefine.
 
 * IR Files.
 define irdata()
-    "UGIR60FL"
+    "SNIR7HFL"
 !enddefine.
 
 * KR Files.
 define krdata()
-    "UGKR60FL"
+    "SNKR7HFL"
 !enddefine.
 
 

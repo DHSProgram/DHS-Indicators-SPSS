@@ -1,8 +1,8 @@
 * Encoding: windows-1252.
 *******************************************************************************************************************************
-Program: 				HKmaster.do
-Purpose: 				Master file for the HIV-AIDS Related Knowledge, Attitudes, and Behaviors 
-						The master file will call other sps files that will produce the HK indicators and produce tables
+Program: 				HKmain.do
+Purpose: 				Main file for the HIV-AIDS Related Knowledge, Attitudes, and Behaviors 
+						The main file will call other sps files that will produce the HK indicators and produce tables
 Data outputs:			Coded variables and table output on screen and in excel tables
 Author: 				Shireen Assaf and translated to SPSS by Ivana Bjelic
 Date last modified:		November 28, 2019 by Ivana Bjelic

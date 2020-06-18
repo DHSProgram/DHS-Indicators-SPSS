@@ -1,9 +1,9 @@
 * Encoding: windows-1252.
 * Encoding: wininsert file = "ws-1252.
 *******************************************************************************************************************************
-Program: 				HVmaster.sps
-Purpose: 				Master file for HIV Prevalence
-						The master file will call other insert file = " files that will produce the HV indicators and produce tables
+Program: 				HVmain.sps
+Purpose: 				Main file for HIV Prevalence
+						The main file will call other insert file = " files that will produce the HV indicators and produce tables
 Data outputs:			Coded variables and table output on screen and in excel tables
 Author: 				Shireen Assaf and translated to SPSS by Ivana Bjelic
 Date last modified:		January 14, 2020 by Ivana Bjelic

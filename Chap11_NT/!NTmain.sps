@@ -1,8 +1,8 @@
 * Encoding: windows-1252.
 *******************************************************************************************************************************
-Program: 				NTmaster.sps
-Purpose: 				Master file for the Nutrition Chapter
-						The master file will call other do files that will produce the NT indicators and produce tables
+Program: 				NTmain.sps
+Purpose: 				Main file for the Nutrition Chapter
+						The main file will call other do files that will produce the NT indicators and produce tables
 Data outputs:			coded variables and table output on screen and in excel tables
 Author: 				Shireen Assaf and translated to SPSS by Ivana Bjelic
 Date last modified:		      May 17, 2020 by Ivana Bjelic

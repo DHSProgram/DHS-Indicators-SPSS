@@ -1,8 +1,8 @@
 * Encoding: windows-1252.
 *******************************************************************************************************************************
-Program: 				WEmaster.sps
-Purpose: 				Master file for the Women's Empowerment Chapter
-						The master file will call other do files that will produce the WE indicators and produce tables
+Program: 				WEmain.sps
+Purpose: 				Main file for the Women's Empowerment Chapter
+						The main file will call other do files that will produce the WE indicators and produce tables
 Data outputs:			Coded variables and table output on screen and in excel tables
 Author: 				Shireen Assaf and translated to SPSS by Ivana Bjelic
 Date last modified:		October 19 2019 by Ivana Bjelic
