@@ -11,12 +11,11 @@ set more off
 
 *** User information for internal DHS use. Please disregard and adjust paths to your own. *** 
 
-cd "C:/Users/$user/ICF/Analysis - Shared Resources/Code/DHS-Indicators-SPSS/Chap17_DV".
+cd "C:\Users\33697\ICF/Analysis - Shared Resources\Code\DHS-Indicators-SPSS\Chap17_DV".
 
 define datapath()
-    "C:/Users/$user/ICF/Analysis - Shared Resources/Data/DHSdata"
+    "C:/Users/33697/ICF/Analysis - Shared Resources/Data/DHSdata"
 !enddefine.
-
 
 cd workingpath.
 
@@ -26,7 +25,7 @@ cd workingpath.
 
 * IR Files.
 define irdata()
-    "NGIR7AFL"
+    "MMIR7AFL"
 !enddefine.
 *NGIR7AFL MWIR7AFL.
 
