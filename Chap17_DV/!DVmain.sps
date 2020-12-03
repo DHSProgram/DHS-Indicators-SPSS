@@ -13,6 +13,7 @@ set more off
 
 cd "C:\Users\33697\ICF/Analysis - Shared Resources\Code\DHS-Indicators-SPSS\Chap17_DV".
 
+*data path where data files are stored.
 define datapath()
     "C:/Users/33697/ICF/Analysis - Shared Resources/Data/DHSdata"
 !enddefine.

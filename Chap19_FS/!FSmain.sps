@@ -19,15 +19,12 @@ set more off
 
 *** User information for internal DHS use. Please disregard and adjust paths to your own. *** 
 
-*change employee id number to personalize path
-global user 33697
-
 *working directory.
-cd "C:/Users/$user/ICF/Analysis - Shared Resources/Code/DHS-Indicators-Stata/Chap19_FS".
+cd "C:\Users\33697\ICF/Analysis - Shared Resources\Code\DHS-Indicators-SPSS\Chap19_FS".
 
 *data path where data files are stored.
 define datapath()
-    "C:/Users/$user/ICF/Analysis - Shared Resources/Data/DHSdata"
+    "C:/Users/33697/ICF/Analysis - Shared Resources/Data/DHSdata"
 !enddefine.
 
 ****************************************************************************************************
