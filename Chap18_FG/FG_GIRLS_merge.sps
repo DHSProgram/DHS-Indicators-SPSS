@@ -1,14 +1,19 @@
 ﻿* Encoding: UTF-8.
 *****************************************************************************************************
-Program: 			FG_GIRLS.sps
+Program: 			FG_GIRLS_merge.sps
 Purpose: 			Code to compute female circumcision indicators among girls 0-14
-Data inputs: 		BR survey list
+Data inputs: 		IR and BR survey list
 Data outputs:		coded variables
 Author:			Tom Pullum and Shireen Assaf and translated to SPSS by Ivana Bjelic
 Date last modified:                           December 02, 2020 by Ivana Bjelic
-Note:			This code only uses the BR file. Older surveys may not information about the daughter's cirucumcision in the BR file. 
-*			The information may instead be in the IR file. In that case please use the FG_GIRLS_merge.sps file. 
-*****************************************************************************************************/
+Note:			Use this file only if information about the daughter's cirucumcision status is not in the BR file. 
+*					
+*			Women in the IR file are asked about the circumcision of their daughters.
+*			However, we need to reshape the file so that the data file uses daughters as the unit of analysis. 
+*			We also need to merge the IR and BR file to include all daughters 0-14 in the denominator.
+*			All the daughters age 0-14 must be in the denominator, including those whose mothers have
+*			g100=0; just those with g121=1 go into the numerator
+*****************************************************************************************************.
 
 *----------------------------------------------------------------------------
 Variables created in this file:
@@ -20,14 +25,55 @@ fg_sewn_gl		"Female circumcision type is sewn closed among girls age 0-14"
 	
 *----------------------------------------------------------------------------.
 
-*select for girls age 0-14.
+***************** Creating a file for daughters age 0-14 *********************
+* Prepare the IR file for merging.
+get file =  datapath + "\"+ irdata + ".sav".
+
+* Reshape the IR file so there is one record per daughter.
+varstocases
+ /make gidx from GIDX$01 to GIDX$20
+ /make g121 from G121$01 to G121$20
+ /make g122 from G122$01 to G122$20
+ /make g123 from G123$01 to G123$20
+ /make g124 from G124$01 to G124$20
+.
+
+select if not sysmis(gidx).
+
+rename variables (gidx=bidx).
+compute in_IR=1.
+
+sort cases by v001 v002 v003 bidx.
+
+save outfile =  datapath + "\IRtemp.sav"/keep v001 v002 v003 bidx g121 g122 g123 g124 in_IR.
+
+* Prepare the BR file.
+get file =  datapath + "\"+ brdata + ".sav".
+
+* Identify girls, living and age 0-14 (b15=1 is redundant).
 select if (b4=2 & b5=1 & b8<=14).
 
-*dropping cases where the mother never heard of circumcision.
+* Crucial line to drop the mothers and daughters who did not get the long questionnaire.
+* drop the girl if the g question were not asked of her mother.
 select if not sysmis(G100).
 
 compute age5=1+trunc(b8/5).
 value labels age5 1 " 0-4" 2 " 5-9" 3 " 10-14".
+
+* in_BR identifies a daughter who is eligible for a g121 code.
+compute in_BR=1.
+
+* MERGE THE BR FILE WITH THE RESHAPED IR FILE.
+sort cases by v001 v002 v003 bidx.
+match files file=*
+/table = datapath + "\IRtemp.sav"
+/by v001 v002 v003 bidx.
+
+* Some girls in the BR file do not have a value on g121 because their mothers had not heard of female circumcision.
+* Crucial line to get the correct denominator.
+if in_BR=1 & sysmis(in_IR) g121=0.
+
+*drop if in_BR=.
 
 ******************************************************************************
 
@@ -264,3 +310,5 @@ output export
 output close * .
 
 new file.
+
+erase file = datapath + "\IRtemp.sav".
