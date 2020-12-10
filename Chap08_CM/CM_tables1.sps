@@ -1,9 +1,9 @@
-* Encoding: windows-1252.
+* Encoding: UTF-8.
 *****************************************************************************************************
 Program: 			CM_tables1.sps
 Purpose: 			produce tables for child mortality and perinatal mortality
 Author:				Shireen Assaf
-Date last modified: September 24 2019 by Ivana Bjelic
+Date last modified: December 12 2020 by Ivana Bjelic
 
 *Note this do file will produce the following tables in excel:
 	1. 	Tables_child_mort:	Contains the child mortality tables (Tables 1-3 in Chapter 8). See Table variable for the table number	
@@ -20,7 +20,7 @@ Date last modified: September 24 2019 by Ivana Bjelic
    *descriptives to descriptives.
 
 *open mortality data file produced by CM_CHILD.sps file. 
-get file = datapath + "\mortality_rates.sav".
+get file = "mortality_rates.sav".
 
 compute filter=(total=1 and colper<=2).
 filter by filter.
@@ -66,32 +66,156 @@ output export
 output close *.
 
 **************************************************************************************************
-* Perinatal mortality: 
+* Stillbirths, early neonatal deaths, and perinatal mortality
 **************************************************************************************************
 * open PMR data file produced by CM_PMR.sav file.
-get file = datapath + "\CM_PMRdata.sav".
+get file = "CM_PMRdata.sav".
 
 compute wt=v005/1000000.
 weight by wt.
 
+*Stillbirths, tables are for the number of stillbirths.
 ctables
   /table  mo_age_at_birth [c] 
+         + preg_interval [c]
          + v025 [c]
          + v024 [c]
          + v106 [c]
          + v190 [c] by
-         cm_peri  [c] [rowpct.validn '' f5.1] 
+         stillbirths  [s] [sum 'Number of stillbirths' f5.0] + stillbirths [s] [validn 'N' f5.0] 
   /categories variables=all empty=exclude missing=exclude
   /categories variables=all total=yes position=after label="Total"
-  /slabels visible=no
+  /slabels visible=yes
+  /titles title=
+    "Stillbirths, tables are for the number of stillbirths".			
+
+ * sort cases by mo_age_at_birth.
+ * split file by mo_age_at_birth.
+ * descriptives variables = stillbirths/statistics=sum.
+ * split file off.
+
+ * sort cases by preg_interval.
+ * split file by preg_interval.
+ * descriptives variables = stillbirths/statistics=sum.
+ * split file off.
+
+ * sort cases by v025.
+ * split file by v025.
+ * descriptives variables = stillbirths/statistics=sum.
+ * split file off.
+
+ * sort cases by v106.
+ * split file by v106.
+ * descriptives variables = stillbirths/statistics=sum.
+ * split file off.
+
+ * sort cases by v024.
+ * split file by v024.
+ * descriptives variables = stillbirths/statistics=sum.
+ * split file off.
+
+ * sort cases by v190.
+ * split file by v190.
+ * descriptives variables = stillbirths/statistics=sum.
+ * split file off.
+
+ * descriptives variables = stillbirths/statistics=sum.
+
+
+* Early neonatal deaths, tables are for the number of early neonatal deaths.
+ctables
+  /table  mo_age_at_birth [c] 
+         + preg_interval [c]
+         + v025 [c]
+         + v024 [c]
+         + v106 [c]
+         + v190 [c] by
+         earlyneonatal  [s] [sum 'Number of early neonatal deaths' f5.0] + earlyneonatal [s] [validn 'N' f5.0] 
+  /categories variables=all empty=exclude missing=exclude
+  /categories variables=all total=yes position=after label="Total"
+  /slabels visible=yes
+  /titles title=
+    "Early neonatal deaths, tables are for the number of early neonatal deaths".	
+
+ * sort cases by mo_age_at_birth.
+ * split file by mo_age_at_birth.
+ * descriptives variables = earlyneonatal/statistics=sum.
+ * split file off.
+
+ * sort cases by preg_interval.
+ * split file by preg_interval.
+ * descriptives variables = earlyneonatal/statistics=sum.
+ * split file off.
+
+ * sort cases by v025.
+ * split file by v025.
+ * descriptives variables = earlyneonatal/statistics=sum.
+ * split file off.
+
+ * sort cases by v106.
+ * split file by v106.
+ * descriptives variables = earlyneonatal/statistics=sum.
+ * split file off.
+
+ * sort cases by v024.
+ * split file by v024.
+ * descriptives variables = earlyneonatal/statistics=sum.
+ * split file off.
+
+ * sort cases by v190.
+ * split file by v190.
+ * descriptives variables = earlyneonatal/statistics=sum.
+ * split file off.
+
+ * descriptives variables = earlyneonatal/statistics=sum.
+
+
+* Perinatal mortality rate per 1000.
+ctables
+  /table  mo_age_at_birth [c] 
+         + preg_interval [c]
+         + v025 [c]
+         + v024 [c]
+         + v106 [c]
+         + v190 [c] by
+         cm_peri  [s] [mean 'Perinatal mortality rate' f5.0] + cm_peri  [s] [validn 'N' f5.0] 
+  /categories variables=all empty=exclude missing=exclude
+  /categories variables=all total=yes position=after label="Total"
+  /slabels visible=yes
   /titles title=
     "Perinatal mortality".			
 
-*crosstabs 
-    /tables = mo_age_at_birth v025 v106 v024 v190 by cm_peri
-    /format = avalue tables
-    /cells = row 
-    /count asis.
+ * sort cases by mo_age_at_birth.
+ * split file by mo_age_at_birth.
+ * descriptives variables = cm_peri/statistics=sum.
+ * split file off.
+
+ * sort cases by preg_interval.
+ * split file by preg_interval.
+ * descriptives variables = cm_peri/statistics=sum.
+ * split file off.
+
+ * sort cases by v025.
+ * split file by v025.
+ * descriptives variables = cm_peri/statistics=sum.
+ * split file off.
+
+ * sort cases by v106.
+ * split file by v106.
+ * descriptives variables = cm_peri/statistics=sum.
+ * split file off.
+
+ * sort cases by v024.
+ * split file by v024.
+ * descriptives variables = cm_peri/statistics=sum.
+ * split file off.
+
+ * sort cases by v190.
+ * split file by v190.
+ * descriptives variables = cm_peri/statistics=sum.
+ * split file off.
+
+ * descriptives variables = cm_peri/statistics=sum.
 
 output export
   /contents  export=visible  layers=printsetting  modelviews=printsetting
@@ -102,6 +226,5 @@ output close *.
 
 new file.
 
-erase file = datapath + "\CM_PMRdata.sav".
 
 **************************************************************************************************

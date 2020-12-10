@@ -1,4 +1,4 @@
-* Encoding: windows-1252.
+* Encoding: UTF-8.
 *******************************************************************************************************************************
 Program: 				CMmain.sps
 Purpose: 				Main file for the Child Mortality Chapter
@@ -44,12 +44,11 @@ define country()
 
 ****************************
 
-* do files that use the IR files.
+* sps files that use the IR files.
 insert file =  "CM_CHILD.sps".
 *Purpose: 	Code child mortality indicators.
-*Code contains programs that will produce an excel file and data file with the mortality rates overall and by background variables with confidence interals
+*Code contains programs that will produce a data file with the mortality rates overall and by background variables
 *The outputs will be manipulated to produce tables that match the tables in the reports.  
-* WARNING: This code takes some time to run (about 5mins). 
 
 insert file =  "CM_PMR.sps".
 *Purpose: 	Code perinatal mortality.

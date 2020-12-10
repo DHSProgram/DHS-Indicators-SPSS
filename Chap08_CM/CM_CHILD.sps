@@ -1,13 +1,12 @@
-* Encoding: windows-1252.
+* Encoding: UTF-8.
 *****************************************************************************************************
 Program: 			CM_CHILD.sps
 Purpose: 			Produce child mortality indicators 
 Data inputs: 		IR survey list
 Data outputs:		coded variables
 Author:				Tom Pullum and modified by Shireen Assaf for the code share project
-Date last modified: September 30 2019 by Ivana Bjelic
-Note:				The program will produce a file "`CNPH'_mortality_rates_with_ci.sav" which can be used to export the results, 
-				where `CNPH' is the two letter country code followed by the 2 character survey phase, ex: UG7A . 
+Date last modified: December 10 2020 by Ivana Bjelic
+Note:				The program will produce a file "mortality_rates.sav" which can be used to export the results.
 *****************************************************************************************************/
 
 ****************************************************************************************
@@ -121,8 +120,8 @@ if m18>5 birth_size=$sysmis.
 variable labels birth_size "Birth size".
 value labels birth_size 1 "small/very small" 2 "average or larger".
 
-save outfile = datapath + "\tempBR.sav"keep dob, child_sex, b5, age_at_death, v005, doi, v101, v102, v106, v190, v024, v025, mo_age_at_birth, birth_order, prev_bint, birth_size.
-file handle BRfiltemp /name=datapath + "\tempBR.sav".
+save outfile = "tempBR.sav"/keep dob, child_sex, b5, age_at_death, v005, doi, v101, v102, v106, v190, v024, v025, mo_age_at_birth, birth_order, prev_bint, birth_size.
+file handle BRfiltemp /name="tempBR.sav".
 
 * ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- .
 * Macro to open dataset and initialize key variables 
@@ -557,11 +556,11 @@ tabcalc backvar=!backvar grpper=!grpper  .
 
 !if (!first<>Y) !then
 add files
-  /file=datapath + "\mortality_rates.sav"
+  /file="mortality_rates.sav"
   /file=*.
 execute.
 !ifend
-save outfile=datapath + "\mortality_rates.sav".
+save outfile="mortality_rates.sav".
 new file.
 erase file = 'deaths.sav'.
 erase file = 'exposure.sav'.
@@ -591,4 +590,6 @@ runmort backvar=birth_size grpper=2.
 
 
 new file.
+
+erase file = "tempBR.sav".
 
