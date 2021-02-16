@@ -18,7 +18,6 @@ define datapath()
     "C:/Users/33697/ICF/Analysis - Shared Resources/Data/DHSdata"
 !enddefine.
 
-cd workingpath.
 
 ***************
 
