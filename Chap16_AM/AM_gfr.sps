@@ -2,7 +2,7 @@
 *****************************************************************************************************
 Program: 			AM_gfr.sps
 Purpose: 			Code to produce ASFRs and GFR for use in estimating maternal mortality
-Data inputs: 		IR survey list
+Data inputs: 		IR and BR survey lists
 Data outputs:		coded variables
 Author:			Trevor Croft for the code share project, and translated to SPSS by Ivana Bjelic
 Date last modified: February 12, 2021 by Ivana Bjelic

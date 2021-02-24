@@ -5,14 +5,14 @@ Purpose: 			Code to produce adult and maternal mortality rates for specific wind
 Data inputs: 		IR survey list
 Data outputs:		AM_Tables.xlsx and AM_completeness.xlsx
 Author:				Trevor Croft and modified by Ivana Bjelic for the code share project
-Date last modified: February 12, 2021 by Ivana Bjelic
+Date last modified: February 16, 2021 by Ivana Bjelic
 Note:				See below 
 *****************************************************************************************************.
 
 *----------------------------------------------------------------------------
 Variables created in this file:
 mx			"mortality rate"
-q_15_to_50	(aka 15q30)	                  "probability of dying between ages 15 and 50"
+q_15_to_50	(aka 15q35)	                  "probability of dying between ages 15 and 50"
 mmx                                               "maternal mortality rate"
 PMDF		                  "proportions maternal among deaths of females of reproductive age"
 MMRatio 	                                    "maternal mortality ratio
@@ -172,6 +172,28 @@ if undefined:
 end program.
 execute.
 
+save outfile = "tmpIR.sav"/keep 
+  caseid v001 v002 v003 v005 v006 v008 v011 v013 mmc1 mmc2
+  mmidx$01 mmidx$02 mmidx$03 mmidx$04 mmidx$05 mmidx$06 mmidx$07 mmidx$08 mmidx$09 mmidx$10 mmidx$11 mmidx$12 mmidx$13 mmidx$14 mmidx$15 mmidx$16 mmidx$17 mmidx$18 mmidx$19 mmidx$20
+  mm1$01 mm1$02 mm1$03 mm1$04 mm1$05 mm1$06 mm1$07 mm1$08 mm1$09 mm1$10 mm1$11 mm1$12 mm1$13 mm1$14 mm1$15 mm1$16 mm1$17 mm1$18 mm1$19 mm1$20
+  mm2$01 mm2$02 mm2$03 mm2$04 mm2$05 mm2$06 mm2$07 mm2$08 mm2$09 mm2$10 mm2$11 mm2$12 mm2$13 mm2$14 mm2$15 mm2$16 mm2$17 mm2$18 mm2$19 mm2$20
+  mm3$01 mm3$02 mm3$03 mm3$04 mm3$05 mm3$06 mm3$07 mm3$08 mm3$09 mm3$10 mm3$11 mm3$12 mm3$13 mm3$14 mm3$15 mm3$16 mm3$17 mm3$18 mm3$19 mm3$20
+  mm4$01 mm4$02 mm4$03 mm4$04 mm4$05 mm4$06 mm4$07 mm4$08 mm4$09 mm4$10 mm4$11 mm4$12 mm4$13 mm4$14 mm4$15 mm4$16 mm4$17 mm4$18 mm4$19 mm4$20
+  mm5$01 mm5$02 mm5$03 mm5$04 mm5$05 mm5$06 mm5$07 mm5$08 mm5$09 mm5$10 mm5$11 mm5$12 mm5$13 mm5$14 mm5$15 mm5$16 mm5$17 mm5$18 mm5$19 mm5$20
+  mm6$01 mm6$02 mm6$03 mm6$04 mm6$05 mm6$06 mm6$07 mm6$08 mm6$09 mm6$10 mm6$11 mm6$12 mm6$13 mm6$14 mm6$15 mm6$16 mm6$17 mm6$18 mm6$19 mm6$20
+  mm7$01 mm7$02 mm7$03 mm7$04 mm7$05 mm7$06 mm7$07 mm7$08 mm7$09 mm7$10 mm7$11 mm7$12 mm7$13 mm7$14 mm7$15 mm7$16 mm7$17 mm7$18 mm7$19 mm7$20
+  mm8$01 mm8$02 mm8$03 mm8$04 mm8$05 mm8$06 mm8$07 mm8$08 mm8$09 mm8$10 mm8$11 mm8$12 mm8$13 mm8$14 mm8$15 mm8$16 mm8$17 mm8$18 mm8$19 mm8$20
+  mm9$01 mm9$02 mm9$03 mm9$04 mm9$05 mm9$06 mm9$07 mm9$08 mm9$09 mm9$10 mm9$11 mm9$12 mm9$13 mm9$14 mm9$15 mm9$16 mm9$17 mm9$18 mm9$19 mm9$20
+  mm10$01 mm10$02 mm10$03 mm10$04 mm10$05 mm10$06 mm10$07 mm10$08 mm10$09 mm10$10 mm10$11 mm10$12 mm10$13 mm10$14 mm10$15 mm10$16 mm10$17 mm10$18 mm10$19 mm10$20
+  mm11$01 mm11$02 mm11$03 mm11$04 mm11$05 mm11$06 mm11$07 mm11$08 mm11$09 mm11$10 mm11$11 mm11$12 mm11$13 mm11$14 mm11$15 mm11$16 mm11$17 mm11$18 mm11$19 mm11$20
+  mm12$01 mm12$02 mm12$03 mm12$04 mm12$05 mm12$06 mm12$07 mm12$08 mm12$09 mm12$10 mm12$11 mm12$12 mm12$13 mm12$14 mm12$15 mm12$16 mm12$17 mm12$18 mm12$19 mm12$20
+  mm13$01 mm13$02 mm13$03 mm13$04 mm13$05 mm13$06 mm13$07 mm13$08 mm13$09 mm13$10 mm13$11 mm13$12 mm13$13 mm13$14 mm13$15 mm13$16 mm13$17 mm13$18 mm13$19 mm13$20
+  mm14$01 mm14$02 mm14$03 mm14$04 mm14$05 mm14$06 mm14$07 mm14$08 mm14$09 mm14$10 mm14$11 mm14$12 mm14$13 mm14$14 mm14$15 mm14$16 mm14$17 mm14$18 mm14$19 mm14$20
+  mm15$01 mm15$02 mm15$03 mm15$04 mm15$05 mm15$06 mm15$07 mm15$08 mm15$09 mm15$10 mm15$11 mm15$12 mm15$13 mm15$14 mm15$15 mm15$16 mm15$17 mm15$18 mm15$19 mm15$20
+  mm16$01 mm16$02 mm16$03 mm16$04 mm16$05 mm16$06 mm16$07 mm16$08 mm16$09 mm16$10 mm16$11 mm16$12 mm16$13 mm16$14 mm16$15 mm16$16 mm16$17 mm16$18 mm16$19 mm16$20.
+
+get file = "tmpIR.sav".
+
 varstocases
   /make mmidx from mmidx$01 mmidx$02 mmidx$03 mmidx$04 mmidx$05 mmidx$06 mmidx$07 mmidx$08 mmidx$09 mmidx$10 mmidx$11 mmidx$12 mmidx$13 mmidx$14 mmidx$15 mmidx$16 mmidx$17 mmidx$18 mmidx$19 mmidx$20
   /make mm1 from mm1$01 mm1$02 mm1$03 mm1$04 mm1$05 mm1$06 mm1$07 mm1$08 mm1$09 mm1$10 mm1$11 mm1$12 mm1$13 mm1$14 mm1$15 mm1$16 mm1$17 mm1$18 mm1$19 mm1$20
@@ -303,6 +325,9 @@ frequencies variables mm9.
 filter off.
 save outfile = "adult_mm_vars.sav".
 dataset close women.
+new file.
+
+erase file = "tmpIR.sav".
 	
 *--------------------------------------------------------------------------
 NOTE:
@@ -311,8 +336,6 @@ adult_mm_vars.sav is an individual-level file for with one record for each
 sibling in the IR file. If there was also a sibling module in the men's survey,
 a parallel routine must be added.
 *--------------------------------------------------------------------------.
-
-new file.
 
 * Re-open the IR data file.
 get file =  datapath + "\"+ irdata + ".sav".
@@ -481,7 +504,7 @@ ctables
 * Export Output.
 output export
   /contents  export=visible  layers=printsetting  modelviews=printsetting
-  /xlsx  documentfile="AM_completeness.xlsx"
+  /xls documentfile="AM_completeness.xls"
      operation=createfile.
 
 output close * .
@@ -730,6 +753,12 @@ variable labels
  /pd 'wtd_prdeaths'
  /md 'wtd_mdeaths'
  /totexp 'wtd_yexp'
+ /mx_adj 'mx_adj: Age-adjusted adult mortality rate for 15-49. Multiply by 1000 to present per 1000 persons'
+ /mpx_adj 'mpx_adj: Age-adjusted pregnancy-related mortality rate for women 15-49. Multiply by 1000 to present per 1000 women'
+ /mmx_adj 'mmx_adj: Age-adjusted maternal mortality rate for women 15-49. Multiply by 1000 to present per 1000 women'
+ /mx 'mx: Adult mortality rate for 15-49. Multiply by 1000 to present per 1000 persons'
+ /mpx 'mpx: Pregnancy-related mortality rate for women 15-49. Multiply by 1000 to present per 1000 women'
+ /mmx 'mmx: Maternal mortality rate for women 15-49. Multiply by 1000 to present per 1000 women'
 .
 
 value labels mm1 1 "Men" 2 "Women".
@@ -744,9 +773,9 @@ output close *.
 
 define saveSheet(!positional !tokens(1))
 output export 
-/xlsx documentfile = "AM_tables.xlsx"
+/xls documentfile = "AM_tables.xls"
 sheet=!1
-operation=MODIFYSHEET
+operation=modifysheet
 /contents export = visible layers = printsetting modelviews = printsetting.
 output close * .
 !enddefine .
@@ -801,6 +830,13 @@ do if (sex = 2).
 + compute prLTR1 = 1 - (1 - PRMRatio)**tfr.
 + compute mLTR1 = 1 - (1 - MMRatio)**tfr.
 end if.
+
+variable labels
+  MMRatio 'mmratio: Maternal mortality ratio. Multiply by 100000 to present per 100,000 live births'
+ /PRMRatio 'prmratio: Pregnancy-related mortality ratio. Multiply by 100000 to present per 100,000 live births'
+ /prLTR1 'prLTR1: Lifetime risk of pregnancy-related mortality'
+ /mLTR1 'mLTR1: Lifetime risk of maternal mortality'
+.
 
 summarize
   /tables=sex tfr MMRatio mLTR1 PRMRatio prLTR1

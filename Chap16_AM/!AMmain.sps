@@ -1,12 +1,12 @@
 ﻿* Encoding: UTF-8.
 ********************************************************************************
 Program:         AMmain.sps
-Purpose:         Main file for the Mortality Chapter
+Purpose:         Main file for the Adult Mortality Chapter
 				                  The main file will call other do files that will produce the AM indicators and produce tables
 Data outputs:   Coded variables, table output on screen, and in excel tables
 Author:            Courtney Allen and translated to SPSS by Ivana Bjelic
 Date last modified:		February 12, 2021 by Ivana Bjelic
-Note:               This program may take some time to run (5-10mins). Please wait until the program is finished before opening any excel files. 
+Note:               This program may take some time to run. Please wait until the program is finished before opening any excel files. 
 ********************************************************************************
 
 *** User information for internal DHS use. Please disregard and adjust paths to your own. *** 
