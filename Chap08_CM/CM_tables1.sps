@@ -2,7 +2,7 @@
 *****************************************************************************************************
 Program: 			CM_tables1.sps
 Purpose: 			produce tables for child mortality and perinatal mortality
-Author:				Shireen Assaf
+Author:			Ivana Bjelic
 Date last modified: December 12 2020 by Ivana Bjelic
 
 *Note this do file will produce the following tables in excel:

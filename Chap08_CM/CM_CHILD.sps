@@ -4,9 +4,9 @@ Program: 			CM_CHILD.sps
 Purpose: 			Produce child mortality indicators 
 Data inputs: 		IR survey list
 Data outputs:		coded variables
-Author:				Tom Pullum and modified by Shireen Assaf for the code share project
-Date last modified: December 10 2020 by Ivana Bjelic
-Note:				The program will produce a file "mortality_rates.sav" which can be used to export the results.
+Author:			Trevor Croft and modified by Ivana Bjelic for the code share project
+Date last modified:                           February 17, 2021 by Ivana Bjelic
+Note:			The program will produce a file "mortality_rates.sav" which can be used to export the results.
 *****************************************************************************************************/
 
 ****************************************************************************************
@@ -575,6 +575,7 @@ erase file = 'grouped.sav'.
 * Total - five 5-year rates - no need to group periods.
 runmort backvar=total period=5 nper=5 grpper=1 first=Y.
 * All background variables - use defaults - two five year rates, if you want to produce grouped 10-yeas rate.
+* To produce childhood mortality estimates for five year periods rather than ten year periods, change the following lines to replace "grpper=2." with "nper=1 grpper=1.".
 runmort backvar=V025  grpper=2.
 runmort backvar=V024  grpper=2.
 runmort backvar=V106  grpper=2.
@@ -585,9 +586,6 @@ runmort backvar=mo_age_at_birth grpper=2.
 runmort backvar=birth_order grpper=2.
 runmort backvar=prev_bint grpper=2.
 runmort backvar=birth_size grpper=2.
-* For 10 year rates, create two 5 year counts of numerators and denominators and then sum them together.
-* For 10 year rates, create two 5 year counts of numerators and denominators and then sum them together. 
-
 
 new file.
 

@@ -1,11 +1,11 @@
-* Encoding: windows-1252.
+* Encoding: UTF-8.
 *****************************************************************************************************
 Program: 			CM_RISK_birth.sps
 Purpose: 			Code to compute high risk births
 Data inputs: 		BR survey list
 Data outputs:		coded variables
-Author:				Thomas Pullum and modified by Shireen Assaf for the code share project
-Date last modified: September 30 2019 by Ivana Bjelic
+Author:			Thomas Pullum, modified by Shireen Assaf for the code share project and translated to SPSS by Ivana Bjelic
+Date last modified:                           September 30 2019 by Ivana Bjelic
 *****************************************************************************************************.
 
 *----------------------------------------------------------------------------

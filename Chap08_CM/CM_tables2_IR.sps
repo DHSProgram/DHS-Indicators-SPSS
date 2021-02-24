@@ -1,9 +1,9 @@
-* Encoding: windows-1252.
+* Encoding: UTF-8.
 *****************************************************************************************************
 Program: 			CM_tables_IR.sps
 Purpose: 			produce tables for high risk birth and high risk fertility behavior
-Author:				Shireen Assaf
-Date last modified: October 09 by Ivana Bjelic
+Author:			Ivana Bjelic
+Date last modified: October 09, 2019 by Ivana Bjelic
 
 *Note this do file will produce the following tables in excel:
 	1. 	Table_Risk_wm:	Contains the tables of high risk fertilty behavior indicators among women

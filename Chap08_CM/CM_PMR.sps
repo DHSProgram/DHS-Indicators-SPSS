@@ -4,10 +4,10 @@ Program: 			CM_PMR.sps
 Purpose: 			Code to compute perinatal mortality 
 Data inputs: 		IR survey list
 Data outputs:		coded variables
-Author:				Trevor Croft
-Date last modified: December 09 2020 by Ivana Bjelic
-Notes:				Any background variable you would like to disaggregate the perinatal mortality by needs to be added to line 19
-				A file "CM_PMRdata.sav" will be produced that can be used to export the results. 
+Author:			Trevor Croft and modified by Ivana Bjelic for the code share project
+Date last modified:                           December 09 2020 by Ivana Bjelic
+Notes:			Any background variable you would like to disaggregate the perinatal mortality by needs to be added to line 19
+			A file "CM_PMRdata.sav" will be produced that can be used to export the results. 
 *****************************************************************************************************/
 
 *----------------------------------------------------------------------------
