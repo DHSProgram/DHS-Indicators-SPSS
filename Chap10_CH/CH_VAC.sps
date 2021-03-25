@@ -6,6 +6,7 @@ Purpose: 			Code vaccination variables.
 Data outputs:		coded variables
 Author:				Shireen Assaf and translated to SPSS by Ivana Bjelic
 Date last modified: September 02 2019 by Ivana Bjelic. 
+                    March 25 2021 by Trevor Croft to correct spelling of Pneumococcal
  * Notes:				Estimates can be created for two age groups (12-23) and (24-35). 
 					
  * 					!! Please choose the age group of interest in line 100.
@@ -32,36 +33,36 @@ ch_pent3_either		"Pentavalent 3rd dose vaccination according to either source"
 *
 ch_polio0_card		"Polio at birth vaccination according to card"
 ch_polio0_moth		"Polio at birth vaccination according to mother"
-ch_polio0_either                	"Polio at birth vaccination according to either source"
+ch_polio0_either	"Polio at birth vaccination according to either source"
 ch_polio1_card		"Polio 1st dose vaccination according to card"
 ch_polio1_moth		"Polio 1st dose vaccination according to mother"
-ch_polio1_either                	"Polio 1st dose vaccination according to either source"
+ch_polio1_either   	"Polio 1st dose vaccination according to either source"
 ch_polio2_card		"Polio 2nd dose vaccination according to card"
 ch_polio2_moth		"Polio 2nd dose vaccination according to mother"
-ch_polio2_either                	"Polio 2nd dose vaccination according to either source"
+ch_polio2_either   	"Polio 2nd dose vaccination according to either source"
 ch_polio3_card		"Polio 3rd dose vaccination according to card"
 ch_polio3_moth		"Polio 3rd dose vaccination according to mother"
-ch_polio3_either                	"Polio 3rd dose vaccination according to either source"
+ch_polio3_either   	"Polio 3rd dose vaccination according to either source"
 *
-ch_peumo1_card		"Peumococcal 1st dose vaccination according to card"
-ch_peumo1_moth		"Peumococcal 1st dose vaccination according to mother"
-ch_peumo1_either            	"Peumococcal 1st dose vaccination according to either source"
-ch_peumo2_card		"Peumococcal 2nd dose vaccination according to card"
-ch_peumo2_moth		"Peumococcal 2nd dose vaccination according to mother"
-ch_peumo2_either            	"Peumococcal 2nd dose vaccination according to either source"
-ch_peumo3_card		"Peumococcal 3rd dose vaccination according to card"
-ch_peumo3_moth		"Peumococcal 3rd dose vaccination according to mother"
-ch_peumo3_either            	"Peumococcal 3rd dose vaccination according to either source"
+ch_pneumo1_card		"Pneumococcal 1st dose vaccination according to card"
+ch_pneumo1_moth		"Pneumococcal 1st dose vaccination according to mother"
+ch_pneumo1_either  	"Pneumococcal 1st dose vaccination according to either source"
+ch_pneumo2_card		"Pneumococcal 2nd dose vaccination according to card"
+ch_pneumo2_moth		"Pneumococcal 2nd dose vaccination according to mother"
+ch_pneumo2_either  	"Pneumococcal 2nd dose vaccination according to either source"
+ch_pneumo3_card		"Pneumococcal 3rd dose vaccination according to card"
+ch_pneumo3_moth		"Pneumococcal 3rd dose vaccination according to mother"
+ch_pneumo3_either  	"Pneumococcal 3rd dose vaccination according to either source"
 *
 ch_rotav1_card		"Rotavirus 1st dose vaccination according to card"
 ch_rotav1_moth		"Rotavirus 1st dose vaccination according to mother"
-ch_rotav1_either                	"Rotavirus 1st dose vaccination according to either source"
+ch_rotav1_either   	"Rotavirus 1st dose vaccination according to either source"
 ch_rotav2_card		"Rotavirus 2nd dose vaccination according to card"
 ch_rotav2_moth		"Rotavirus 2nd dose vaccination according to mother"
-ch_rotav2_either                	"Rotavirus 2nd dose vaccination according to either source"
+ch_rotav2_either   	"Rotavirus 2nd dose vaccination according to either source"
 ch_rotav3_card		"Rotavirus 3rd dose vaccination according to card"
 ch_rotav3_moth		"Rotavirus 3rd dose vaccination according to mother"
-ch_rotav3_either                	"Rotavirus 3rd dose vaccination according to either source"
+ch_rotav3_either   	"Rotavirus 3rd dose vaccination according to either source"
 *
 ch_meas_card		"Measles vaccination according to card"
 ch_meas_moth		"Measles vaccination according to mother"
@@ -69,13 +70,13 @@ ch_meas_either		"Measles vaccination according to either source"
 *
 ch_allvac_card		"All basic vaccinations according to card"
 ch_allvac_moth		"All basic vaccinations according to mother"
-ch_allvac_either                	"All basic vaccinations according to either source"
+ch_allvac_either   	"All basic vaccinations according to either source"
 *
 ch_novac_card		"No vaccinations according to card"
 ch_novac_moth		"No vaccinations according to mother"
 ch_novac_either		"No vaccinations according to either source"
 *
-ch_card_ever_had            	"Ever had a vacciation card"
+ch_card_ever_had   	"Ever had a vacciation card"
 ch_card_seen		"Vaccination card seen"
 ----------------------------------------------------------------------------*.
 
@@ -228,50 +229,50 @@ compute h54=$sysmis.
 compute h55=$sysmis.
 compute h56=$sysmis.
 
-recode h54 (0,8=0 ) (else=1) into peumo1.
-recode h55 (0,8=0 ) (else=1) into peumo2.
-recode h56 (0,8=0 ) (else=1) into peumo3.
-compute peumosum= peumo1+peumo2+peumo3.
+recode h54 (0,8=0 ) (else=1) into Pneumo1.
+recode h55 (0,8=0 ) (else=1) into Pneumo2.
+recode h56 (0,8=0 ) (else=1) into Pneumo3.
+compute Pneumosum= Pneumo1+Pneumo2+Pneumo3.
 
 * this step is performed for multi-dose vaccines to take care of any gaps in the vaccination history. See DHS guide to statistics 
 * for further explanation.
-compute ch_peumo1_either=(peumosum>=1).
-compute ch_peumo2_either=(peumosum>=2).
-compute ch_peumo3_either=(peumosum>=3).
+compute ch_pneumo1_either=(Pneumosum>=1).
+compute ch_pneumo2_either=(Pneumosum>=2).
+compute ch_pneumo3_either=(Pneumosum>=3).
 
 *Pneumococcal 1, 2, 3 mother's report.
-compute ch_peumo1_moth=ch_peumo1_either.
-if source=1 ch_peumo1_moth=0.
+compute ch_pneumo1_moth=ch_pneumo1_either.
+if source=1 ch_pneumo1_moth=0.
 
-compute ch_peumo2_moth=ch_peumo2_either.
-if source=1 ch_peumo2_moth=0.
+compute ch_pneumo2_moth=ch_pneumo2_either.
+if source=1 ch_pneumo2_moth=0.
 
-compute ch_peumo3_moth=ch_peumo3_either.
-if source=1 ch_peumo3_moth=0.
+compute ch_pneumo3_moth=ch_pneumo3_either.
+if source=1 ch_pneumo3_moth=0.
 
 *Pneumococcal 1, 2, 3 by card.
-compute ch_peumo1_card=ch_peumo1_either.
-if source=2 ch_peumo1_card=0.
+compute ch_pneumo1_card=ch_pneumo1_either.
+if source=2 ch_pneumo1_card=0.
 
-compute ch_peumo2_card=ch_peumo2_either.
-if source=2 ch_peumo2_card=0.
+compute ch_pneumo2_card=ch_pneumo2_either.
+if source=2 ch_pneumo2_card=0.
 
-compute ch_peumo3_card=ch_peumo3_either.
-if source=2 ch_peumo3_card=0.
+compute ch_pneumo3_card=ch_pneumo3_either.
+if source=2 ch_pneumo3_card=0.
 
 execute.
-delete variables peumo1 peumo2 peumo3 peumosum.
+delete variables Pneumo1 Pneumo2 Pneumo3 Pneumosum.
 
-variable labels ch_peumo1_card "Peumococcal 1st dose vaccination according to card".
-variable labels ch_peumo1_moth "Peumococcal 1st dose vaccination according to mother".
-variable labels ch_peumo1_either "Peumococcal 1st dose vaccination according to either source".
-variable labels ch_peumo2_card "Peumococcal 2nd dose vaccination according to card".
-variable labels ch_peumo2_moth "Peumococcal 2nd dose vaccination according to mother".
-variable labels ch_peumo2_either "Peumococcal 2nd dose vaccination according to either source".
-variable labels ch_peumo3_card "Peumococcal 3rd dose vaccination according to card".
-variable labels ch_peumo3_moth "Peumococcal 3rd dose vaccination according to mother".
-variable labels ch_peumo3_either "Peumococcal 3rd dose vaccination according to either source".
-value labels ch_peumo1_card ch_peumo1_moth ch_peumo1_either ch_peumo2_card ch_peumo2_moth ch_peumo2_either ch_peumo3_card ch_peumo3_moth ch_peumo3_either 0 "No" 1 "Yes".
+variable labels ch_pneumo1_card "Pneumococcal 1st dose vaccination according to card".
+variable labels ch_pneumo1_moth "Pneumococcal 1st dose vaccination according to mother".
+variable labels ch_pneumo1_either "Pneumococcal 1st dose vaccination according to either source".
+variable labels ch_pneumo2_card "Pneumococcal 2nd dose vaccination according to card".
+variable labels ch_pneumo2_moth "Pneumococcal 2nd dose vaccination according to mother".
+variable labels ch_pneumo2_either "Pneumococcal 2nd dose vaccination according to either source".
+variable labels ch_pneumo3_card "Pneumococcal 3rd dose vaccination according to card".
+variable labels ch_pneumo3_moth "Pneumococcal 3rd dose vaccination according to mother".
+variable labels ch_pneumo3_either "Pneumococcal 3rd dose vaccination according to either source".
+value labels ch_pneumo1_card ch_pneumo1_moth ch_pneumo1_either ch_pneumo2_card ch_pneumo2_moth ch_pneumo2_either ch_pneumo3_card ch_pneumo3_moth ch_pneumo3_either 0 "No" 1 "Yes".
 
 *** Rotavirus  ****
 *Rotavirus 1, 2, 3 either source.

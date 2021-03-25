@@ -5,6 +5,7 @@ Program: 			CH_tables_vac.sps
 Purpose: 			produce tables for vaccination indicators
 Author:				Ivana Bjelic
 Date last modified: September 02 2019 by Ivana Bjelic
+                    March 25 2021 by Trevor Croft to correct spelling of Pneumococcal
 
 *Note this do file will produce the following tables in excel:
 	1. 	Tables_Vac:		Contains the tables for child's vaccination indicators
@@ -59,10 +60,10 @@ frequencies variables ch_polio0_card ch_polio0_moth ch_polio0_either
 		ch_polio2_card ch_polio2_moth ch_polio2_either
 		ch_polio3_card ch_polio3_moth ch_polio3_either.
 
-*Peumococcal.
-frequencies variables ch_peumo1_card ch_peumo1_moth ch_peumo1_either	
-		ch_peumo2_card ch_peumo2_moth ch_peumo2_either
-		ch_peumo3_card ch_peumo3_moth ch_peumo3_either.
+*Pneumococcal.
+frequencies variables ch_pneumo1_card ch_pneumo1_moth ch_pneumo1_either	
+		ch_pneumo2_card ch_pneumo2_moth ch_pneumo2_either
+		ch_pneumo3_card ch_pneumo3_moth ch_pneumo3_either.
 
 *Rotavirus.
 frequencies variables ch_rotav1_card ch_rotav1_moth ch_rotav1_either 
@@ -269,7 +270,7 @@ ctables
     /count asis.
 
 ****************************************************
-*Peumococcal1.
+*Pneumococcal1.
 ctables
   /table  b4 [c] 
          + birth_order [c]
@@ -278,21 +279,21 @@ ctables
          + v024 [c]
          + v106 [c]
          + v190 [c] by
-         ch_peumo1_either [c] [rowpct.validn '' f5.1] + num [s] [sum ,'', f5.0]
+         ch_pneumo1_either [c] [rowpct.validn '' f5.1] + num [s] [sum ,'', f5.0]
   /categories variables=all empty=exclude missing=exclude
   /categories variables=all total=yes position=after label="Total"
   /slabels visible=no
   /titles title=
-    "Peumococcal1".			
+    "Pneumococcal1".			
 
 *crosstabs 
-    /tables = b4 birth_order ch_card_seen v025 v024 v106 v190 by ch_peumo1_either
+    /tables = b4 birth_order ch_card_seen v025 v024 v106 v190 by ch_pneumo1_either
     /format = avalue tables
     /cells = row 
     /count asis.
 
 ****************************************************
-*Peumococcal2.
+*Pneumococcal2.
 ctables
   /table  b4 [c] 
          + birth_order [c]
@@ -301,21 +302,21 @@ ctables
          + v024 [c]
          + v106 [c]
          + v190 [c] by
-         ch_peumo2_either [c] [rowpct.validn '' f5.1] + num [s] [sum ,'', f5.0]
+         ch_pneumo2_either [c] [rowpct.validn '' f5.1] + num [s] [sum ,'', f5.0]
   /categories variables=all empty=exclude missing=exclude
   /categories variables=all total=yes position=after label="Total"
   /slabels visible=no
   /titles title=
-    "Peumococcal2".			
+    "Pneumococcal2".			
 
 *crosstabs 
-    /tables = b4 birth_order ch_card_seen v025 v024 v106 v190 by ch_peumo2_either
+    /tables = b4 birth_order ch_card_seen v025 v024 v106 v190 by ch_pneumo2_either
     /format = avalue tables
     /cells = row 
     /count asis.
 
 ****************************************************
-*Peumococcal3.
+*Pneumococcal3.
 ctables
   /table  b4 [c] 
          + birth_order [c]
@@ -324,15 +325,15 @@ ctables
          + v024 [c]
          + v106 [c]
          + v190 [c] by
-         ch_peumo3_either [c] [rowpct.validn '' f5.1] + num [s] [sum ,'', f5.0]
+         ch_pneumo3_either [c] [rowpct.validn '' f5.1] + num [s] [sum ,'', f5.0]
   /categories variables=all empty=exclude missing=exclude
   /categories variables=all total=yes position=after label="Total"
   /slabels visible=no
   /titles title=
-    "Peumococcal3".			
+    "Pneumococcal3".			
 
 *crosstabs 
-    /tables = b4 birth_order ch_card_seen v025 v024 v106 v190 by ch_peumo3_either
+    /tables = b4 birth_order ch_card_seen v025 v024 v106 v190 by ch_pneumo3_either
     /format = avalue tables
     /cells = row 
     /count asis.
