@@ -2,11 +2,11 @@
 ******************************************************************************************************
 Program: 			CH_VAC.sps
 Purpose: 			Code vaccination variables.
- * Data inputs: 		KR survey list
+Data inputs: 		KR survey list
 Data outputs:		coded variables
 Author:				Shireen Assaf and translated to SPSS by Ivana Bjelic
 Date last modified: September 02 2019 by Ivana Bjelic. 
-                    March 25 2021 by Trevor Croft to correct spelling of Pneumococcal
+                    March 26 2021 by Trevor Croft to correct coding of the vaccination variables and the spelling of Pneumococcal
  * Notes:				Estimates can be created for two age groups (12-23) and (24-35). 
 					
  * 					!! Please choose the age group of interest in line 100.
@@ -76,7 +76,7 @@ ch_novac_card		"No vaccinations according to card"
 ch_novac_moth		"No vaccinations according to mother"
 ch_novac_either		"No vaccinations according to either source"
 *
-ch_card_ever_had   	"Ever had a vacciation card"
+ch_card_ever_had   	"Ever had a vaccination card"
 ch_card_seen		"Vaccination card seen"
 ----------------------------------------------------------------------------*.
 
@@ -101,7 +101,7 @@ value labels source 1 "card" 2 "mother".
 
 *** BCG ***
 *BCG either source.
-recode h2 (0,8=0) (else=1) into ch_bcg_either.
+recode h2 (1,2,3=1) (else=0) into ch_bcg_either.
 
 *BCG mother's report.
 compute ch_bcg_moth=ch_bcg_either.
@@ -118,9 +118,9 @@ value labels ch_bcg_card ch_bcg_moth ch_bcg_either 0 "No" 1 "Yes".
 
 *** Pentavalent ***.
 *DPT 1, 2, 3 either source.
-recode h3 (0,8=0 ) (else=1) into dpt1.
-recode h5 (0,8=0 ) (else=1) into dpt2.
-recode h7 (0,8=0 ) (else=1) into dpt3.
+recode h3 (1,2,3=1) (else=0) into dpt1.
+recode h5 (1,2,3=1) (else=0) into dpt2.
+recode h7 (1,2,3=1) (else=0) into dpt3.
 compute dptsum= dpt1+dpt2+dpt3.
 
 * this step is performed for multi-dose vaccines to take care of any gaps in the vaccination history. See DHS guide to statistics 
@@ -166,11 +166,11 @@ value labels ch_pent1_card  ch_pent1_moth ch_pent1_either ch_pent2_card ch_pent2
 *** Polio ***.
 
 *polio 0, 1, 2, 3 either source.
-recode h0 (0,8=0 ) (else=1) into ch_polio0_either.
+recode h0 (1,2,3=1) (else=0) into ch_polio0_either.
 
-recode h4 (0,8=0 ) (else=1) into polio1.
-recode h6 (0,8=0 ) (else=1) into polio2.
-recode h8 (0,8=0 ) (else=1) into polio3.
+recode h4 (1,2,3=1) (else=0) into polio1.
+recode h6 (1,2,3=1) (else=0) into polio2.
+recode h8 (1,2,3=1) (else=0) into polio3.
 compute poliosum=polio1 + polio2 + polio3.
 
 * this step is performed for multi-dose vaccines to take care of any gaps in the vaccination history. See DHS guide to statistics 
@@ -229,9 +229,9 @@ compute h54=$sysmis.
 compute h55=$sysmis.
 compute h56=$sysmis.
 
-recode h54 (0,8=0 ) (else=1) into Pneumo1.
-recode h55 (0,8=0 ) (else=1) into Pneumo2.
-recode h56 (0,8=0 ) (else=1) into Pneumo3.
+recode h54 (1,2,3=1) (else=0) into Pneumo1.
+recode h55 (1,2,3=1) (else=0) into Pneumo2.
+recode h56 (1,2,3=1) (else=0) into Pneumo3.
 compute Pneumosum= Pneumo1+Pneumo2+Pneumo3.
 
 * this step is performed for multi-dose vaccines to take care of any gaps in the vaccination history. See DHS guide to statistics 
@@ -281,9 +281,9 @@ compute h57=$sysmis.
 compute h58=$sysmis.
 compute h59=$sysmis.
 
-recode h57 (0,8=0 ) (else=1) into rotav1.
-recode h58 (0,8=0 ) (else=1) into rotav2.
-recode h59 (0,8=0 ) (else=1) into rotav3.
+recode h57 (1,2,3=1) (else=0) into rotav1.
+recode h58 (1,2,3=1) (else=0) into rotav2.
+recode h59 (1,2,3=1) (else=0) into rotav3.
 compute rotavsum= rotav1+rotav2+rotav3.
 
 * this step is performed for multi-dose vaccines to take care of any gaps in the vaccination history. See DHS guide to statistics 
@@ -328,7 +328,7 @@ value labels ch_rotav1_card ch_rotav1_moth ch_rotav1_either ch_rotav2_card ch_ro
 
 *** Measles ***.
 *measles either source.
-recode h9 (0,8=0 ) (else=1) into ch_meas_either.
+recode h9 (1,2,3=1) (else=0) into ch_meas_either.
 
 *measles mother's report.
 compute ch_meas_moth=ch_meas_either.
