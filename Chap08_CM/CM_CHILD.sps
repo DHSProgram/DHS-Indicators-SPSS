@@ -5,7 +5,7 @@ Purpose: 			Produce child mortality indicators
 Data inputs: 		IR survey list
 Data outputs:		coded variables
 Author:			Trevor Croft and modified by Ivana Bjelic for the code share project
-Date last modified:                           February 17, 2021 by Ivana Bjelic
+Date last modified:                           March 29, 2021 by Trevor Croft
 Note:			The program will produce a file "mortality_rates.sav" which can be used to export the results.
 *****************************************************************************************************/
 
@@ -580,7 +580,6 @@ runmort backvar=V025  grpper=2.
 runmort backvar=V024  grpper=2.
 runmort backvar=V106  grpper=2.
 runmort backvar=V190  grpper=2.
-runmort backvar=child_sex  grpper=2.
 runmort backvar=child_sex grpper=2.
 runmort backvar=mo_age_at_birth grpper=2.
 runmort backvar=birth_order grpper=2.
