@@ -243,7 +243,7 @@ compute rc_hins_priv = (v481d=1).
 variable labels rc_hins_priv "Health insurance coverage - privately purchased commercial insurance".
 value labels rc_hins_priv 0 "No" 1 "Yes".
 
-*Health insrance – Other.
+*Health insurance – Other.
 compute rc_hins_other=0.
 do repeat x=v481e v481f v481g v481h v481x.
 +  if x=1 rc_hins_other=1.
