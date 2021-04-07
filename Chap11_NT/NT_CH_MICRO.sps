@@ -44,7 +44,7 @@ recode h33d (97,98,99=15)(else=copy) into h33d2.
 recode h33y (9997,9998,9999=sysmis)(else=copy) into h33y2.
 do if (age>=6 and age<=59) and b5<>0.
 +compute nt_ch_micro_vas=0.
-+if (h34=1 or (trunc((yrmoda(v007,v006,v016) - yrmoda(h33y2,h33m2,h33d2))/30.4375) <= 6)) nt_ch_micro_vas=1.
++if (h34=1 or (trunc((yrmoda(v007,v006,v016) - yrmoda(h33y2,h33m2,h33d2))/30.4375) < 6)) nt_ch_micro_vas=1.
 end if.
 variable labels  nt_ch_micro_vas "Children age 6-59 mos given Vit. A supplements".
 value labels nt_ch_micro_vas 1 "Yes" 0 "No".
