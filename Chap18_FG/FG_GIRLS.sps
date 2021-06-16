@@ -2,7 +2,7 @@
 *****************************************************************************************************
 Program: 			FG_GIRLS.sps
 Purpose: 			Code to compute female circumcision indicators among girls 0-14
-Data inputs: 		BR survey list
+Data inputs: 		BR dataset
 Data outputs:		coded variables
 Author:			Tom Pullum and Shireen Assaf and translated to SPSS by Ivana Bjelic
 Date last modified:                           December 02, 2020 by Ivana Bjelic

@@ -5,22 +5,22 @@ Purpose: 			produce tables for indicators
 Author:				Ivana Bjelic
 Date last modified: Aug 18 2019 by Ivana Bjelic
 
-*Note this do file will produce the following tables in excel:
+*This do file will produce the following tables in excel:
 	1. 	Tables_Know_wm:		Contains the tables for knowledge indicators for women
 	2. 	Tables_Use_ev:		Contains the tables for ever use of family planning for women
 	3. 	Tables_Use_cr:		Contains the tables for current use of family planning for women + timing of sterlization
-	4.	Tables_source_info:	                  Contains the tables for source of family planning method, brands used, and information given about the method for women
+	4.	Tables_source_info:	 Contains the tables for source of family planning method, brands used, and information given about the method for women
 	not done 5.	Tables_Discont:		Contains the tables for discontinuation rates and reason for discontinuation for women
 	6.	Tables_Need:		Contains the tables for unmet need, met need, demand satisfied, and future intention to use for women
-	7.	Tables_Communicat:	                  Contains the tables for exposure to FP messages, decision on use/nonuse, discussions for women
-
+	7.	Tables_Communicat:	 Contains the tables for exposure to FP messages, decision on use/nonuse, discussions for women
 
  * Notes: 					For knowledge of contraceptive methods, ever use, current use, and unmet need variables, the population of
 						interest can be selected (all women, currently married women, and sexually active women).
  * 						The reminaing indicators are reported for currently married women.
+ * 						Make the secltion of the population of interest below (line 42) for IR files. 
 
- * 						Make the secltion of the population of interest below for IR files. 
-
+*Notes: For women the indicators are outputed for age 15-49 in line 37. 
+*This can be commented out if the indicators are required for all women.			
 *****************************************************************************************************/
 
 * the total will show on the last row of each table.
@@ -32,12 +32,14 @@ Date last modified: Aug 18 2019 by Ivana Bjelic
    *crosstabs to crosstabs
    *frequencies to frequencies.
 
+* limiting to women age 15-49.
+select if not(v012<15 | v012>49).
+
 compute wt=v005/1000000.
 
 weight by wt.
 
 ** Select population of interest.
-
 *all women.
 compute select=1.
 

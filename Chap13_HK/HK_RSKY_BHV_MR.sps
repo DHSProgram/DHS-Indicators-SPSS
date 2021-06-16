@@ -2,13 +2,11 @@
 *****************************************************************************************************
 Program: 			HK_RSKY_BHV_MR.sps
 Purpose: 			Code to compute Multiple Sexual Partners, Higher-Risk Sexual Partners, and Condom Use
-Data inputs: 		MR survey list
+Data inputs: 		MR dataset
 Data outputs:		coded variables
 Author:				Shireen Assaf and translated to SPSS by Ivana Bjelic
 Date last modified: November 29, 2019 by Ivana Bjelic
-Note:				The indicators below can be computed for men and women. 
-*					For men the indicators are computed for age 15-49 in line 34. 
-*					This can be commented out if the indicators are required for all men or can be changed to select for age 15-24.	
+Note:				The indicators below can be computed for men and women. No age selection is made here.
 					
 *					For the indicator hk_cond_notprtnr, please see the DHS guide to statistics for changes over time.
 *					The current code will only match recent surveys. 					
@@ -29,9 +27,6 @@ hk_paid_sex_cond	"Used a condom at last paid sexual intercourse in the past 12 m
 ----------------------------------------------------------------------------.
 
 * indicators from MR file.
-
-* limiting to men age 15-49.
-select if mv012<=49.
 
 ***********************************
 

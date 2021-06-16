@@ -2,7 +2,7 @@
 *****************************************************************************************************
 Program: 			CM_RISK_wm.sps
 Purpose: 			Code to compute high risk birth in women
-Data inputs: 		IR survey list
+Data inputs: 		IR dataset
 Data outputs:		coded variables
 Author:			Shireen Assaf and Thomas Pullum, and translated to SPSS by Ivana Bjelic
 Date last modified:                           September 23 2019 by Ivana Bjelic

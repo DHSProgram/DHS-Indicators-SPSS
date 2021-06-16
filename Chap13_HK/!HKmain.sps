@@ -59,7 +59,7 @@ insert file = "HK_BHV_YNG_IR.sps".
 
 insert file = "HK_tables_IR.sps".
 *Purpose: 	Produce tables for indicators computed from the above sps files.
-
+* Note:		This will drop any women not in 15-49 age range. You can change this selection. Please check the notes in the do file.
 */
 *******************************************************************************************************************************
 
@@ -94,6 +94,7 @@ insert file = "HK_BHV_YNG_MR.sps".
 
 insert file = "HK_tables_MR.sps".
 *Purpose: 	Produce tables for indicators computed from the above sps files.
+* Note:		This will drop any men not in 15-49 age range. You can change this selection. Please check the notes in the do file.
 */
 *******************************************************************************************************************************
 *******************************************************************************************************************************

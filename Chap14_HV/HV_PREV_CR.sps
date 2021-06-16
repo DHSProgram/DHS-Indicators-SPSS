@@ -2,7 +2,7 @@
 *****************************************************************************************************
 Program: 			HV_PREV_CR.sps
 Purpose: 			Code for HIV prevalence
-Data inputs: 		CR survey list
+Data inputs: 		CR dataset
 Data outputs:		coded variables
 Author:				Shireen Assaf and translated to SPSS by Ivana Bjelic
 Date last modified: January 14, 2020 by Ivana Bjelic

@@ -50,6 +50,8 @@ insert file = "WE_EMPW_IR.sps".
 
 insert file = "WE_tables_IR.sps".
 *Purpose: 	Produce tables for indicators computed from the above do files.
+* Note:		This will drop any women not in 15-49 age range. You can change this selection. Please check the notes in the do file.
+
 */
 *******************************************************************************************************************************
 *******************************************************************************************************************************
@@ -69,6 +71,8 @@ insert file = "WE_EMPW_MR.sps".
 
 insert file = "WE_tables_MR.sps".
 *Purpose: 	Produce tables for indicators computed from the above do files.
+* Note:		This will drop any men not in 15-49 age range. You can change this selection. Please check the notes in the do file.
+
 */
 *******************************************************************************************************************************
 *******************************************************************************************************************************

@@ -5,7 +5,7 @@ Purpose: 			produce tables for indicators
 Author:			 Ivana Bjelic
 Date last modified: August 30 2019 by Ivana Bjelic
 
-*Note this do file will produce the following tables in excel:
+*This do file will produce the following table in excel:
 	Tables_HH_ITN:		Contains the tables for houeshold possession of ITNs 
 *****************************************************************************************************/
 * the total will show on the last row of each table.

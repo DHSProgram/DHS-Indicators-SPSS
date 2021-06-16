@@ -5,17 +5,19 @@ Purpose: 			produce tables for indicators
 Author:				Ivana Bjelic
 Date last modified: November 28 2019 by Ivana Bjelic
 
-*Note this do file will produce the following tables in excel:
-	1. 	Tables_know_wm:	Contains the tables for HIV/AIDS knowledge indicators for women
-	2. 	Tables_atd_wm:	Contains the tables for HIV/AIDS attitude indicators for women
+*This do file will produce the following tables in excel:
+	1. Tables_know_wm:	Contains the tables for HIV/AIDS knowledge indicators for women
+	2. Tables_atd_wm:	Contains the tables for HIV/AIDS attitude indicators for women
 	3.	Tables_rsky_wm: 	Contains the tables for risky sexual behaviors for women
 	4.	Tables_test_wm: 	Contains the tables for HIV prior testing and counseling for women
 	5.	Tables_sti_wm:	Contains the tables for STI indicators for women
-	6.               Tables_bhv_yng_wm:	Contains the table for sexual behavior among young people for women
+	6. Tables_bhv_yng_wm:	Contains the table for sexual behavior among young people for women
 
 *Notes:	Several tables in the final reports are reported about young people (15-24). 
 *To produce these tables you can rerun the code among young people age group using v013 by droping cases over 24 years (i.e select if v013<=2).
 
+*For women the indicators are outputed for age 15-49 in line 31. 
+*This can be commented out if the indicators are required for all women or changed for the age group 15-24. 
 *****************************************************************************************************/
 * the total will show on the last row of each table.
 * comment out the tables or indicator section you do not want.
@@ -24,6 +26,9 @@ Date last modified: November 28 2019 by Ivana Bjelic
     ctables to *ctables.
    *crosstabs to crosstabs
    *frequencies to frequencies.
+
+* limiting to women age 15-49.
+select if not(v012<15 | v012>49).
 
 compute wt=v005/1000000.
 

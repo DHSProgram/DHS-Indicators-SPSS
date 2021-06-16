@@ -5,7 +5,7 @@ Purpose: 			produce tables for indicators
 Author:				Ivana Bjelic
 Date last modified: May 18 2020 by Ivana Bjelic
 
-*Note this do file will produce the following tables in excel:
+*This do file will produce the following tables in excel:
 	1. 	Tables_nut_ch:	Contains the tables for nutritional status indicators for children
 	2.	Tables_anemia_ch:	Contains the tables for anemia indicators for children
 *****************************************************************************************************/

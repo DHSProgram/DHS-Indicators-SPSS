@@ -2,7 +2,7 @@
  * /*****************************************************************************************************
 Program: 			FP_EVENTS.sps
 Purpose: 			Create Events Files from Calendar Data
-Data inputs: 		IR data files
+Data inputs: 		IR dataset
 Data outputs:		Reshaped events file for analysis
 Author:				Trevor Croft and translated to SPSS by Ivana Bjelic
 Date last modified: September 30 2019 by Ivana Bjelic for codeshare project 				

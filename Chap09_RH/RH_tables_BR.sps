@@ -5,7 +5,7 @@ Purpose: 			produce tables for indicators
 Author:			 Ivana Bjelic
 Date last modified: July 17 2019 by Ivana Bjelic
 
-*Note this do file will produce the following tables in excel:
+*This do file will produce the following table in excel:
 Tables_Deliv:	Contains the tables for the delivery indicators
 ***********************************************************************************************************************************************************************************************************/
 

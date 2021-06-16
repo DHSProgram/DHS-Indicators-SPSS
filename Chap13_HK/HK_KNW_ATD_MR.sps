@@ -2,13 +2,11 @@
 *****************************************************************************************************
 Program: 			HK_KNW_ATD_MR.sps
 Purpose: 			Code to compute HIV-AIDS related knowledge and attitude indicators 
-Data inputs: 		MR survey list
+Data inputs: 		MR dataset
 Data outputs:		coded variables
 Author:				Shireen Assaf and translated to SPSS by Ivana Bjelic
 Date last modified: November 28, 2019 by Ivana Bjelic
-Note:				The indicators below can be computed for men and women. 
-*					For men the indicators are computed for age 15-49 in line 44. 
-*					This can be commented out if the indicators are required for all men.
+Note:				The indicators below can be computed for men and women. No age selection is made here.
 
 *					Indicator hk_knw_hiv_hlth_2miscp (line 88) is country specific, please check the final report for the two most common misconceptions. 
 *					Currently coded as rejecting that HIV can be transmitted by mosquito bites and supernatural means.			
@@ -39,9 +37,6 @@ hk_atd_discriminat		"Have discriminatory attitudes towards people living with HI
 ----------------------------------------------------------------------------.
 
 * indicators from MR file.
-
-* limiting to men age 15-49.
-select if mv012<=49.
 
 *** HIV related knowledge ***
 *Ever heard of HIV/AIDS.

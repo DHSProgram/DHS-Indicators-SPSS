@@ -11,8 +11,8 @@ Date last modified:		September 23, 2019 by Ivana Bjelic
 *** User information for internal DHS use. Please disregard and adjust paths to your own. *** 
 
 *local user 39585	//change employee id number to personalize path.
-cd "C:\Users\33697\ICF/Analysis - Shared Resources\Code\DHS-Indicators-SPSS\Chap08_CM".
-
+cd "C:\Users\33697\ICF\Analysis - Shared Resources\Code\DHS-Indicators-SPSS\Chap08_CM".
+     
 *.
 define datapath()
     "C:/Users/33697/ICF/Analysis - Shared Resources/Data/DHSdata"
@@ -66,7 +66,7 @@ insert file =  "CM_RISK_wm.sps".
 
 insert file =  "CM_tables2_IR.sps".
 *Purpose: 	Produce tables for high risk fertility. 
-
+* Note:		This will drop any women not in 15-49 age range. You can change this selection. Please check the notes in the do file.
 */
 *******************************************************************************************************************************
 *******************************************************************************************************************************
@@ -82,4 +82,6 @@ insert file = "CM_RISK_births.sps".
 
 insert file = "CM_tables2_KR.sps".
 *Purpose: 	Produce tables for high risk births.
+
+
 

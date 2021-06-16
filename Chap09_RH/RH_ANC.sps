@@ -2,7 +2,7 @@
  * /*****************************************************************************************************
 Program: 			RH_ANC.sps
 Purpose: 			Code ANC indicators
-Data inputs: 		IR survey list
+Data inputs: 		IR dataset
 Data outputs:		coded variables
 Author:				Shireen Assaf and translated to SPSS by Ivana Bjelic
 Date last modified: Aug 22 2019 by Ivana Bjelic 

@@ -109,6 +109,7 @@ insert file = "CH_KNOW_ORS.sps".
 
 insert file = "CH_tables_IR.sps".
 *Purpose: 	Produce tables for indicators computed from above do files. 
+* Note:		This will drop any women not in 15-49 age range. You can change this selection. Please check the notes in the do file.
 
 *******************************************************************************************************************************
 *******************************************************************************************************************************

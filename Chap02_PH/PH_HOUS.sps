@@ -2,7 +2,7 @@
 *****************************************************************************************************
 Program: 			PH_HOUS.sps
 Purpose: 			Code to compute household characteristics, possessions, and smoking in the home
-Data inputs: 		HR survey list
+Data inputs: 		HR dataset
 Data outputs:		coded variables
 Author:				Shireen Assaf and translated to SPSS by Ivana Bjelic
 Date last modified: June 16, 2020 by Ivana Bjelic

@@ -5,12 +5,11 @@ Purpose: 			produce tables for indicators
 Author:				Ivana Bjelic
 Date last modified: January 17 2020 by Ivana Bjelic
 
-*Note this do file will produce the following tables in excel:
-	1. 	Tables_coverage:	Contains the tables for HIV testing coverage for women, men, and total. THESE TABLES ARE UNWEIGHTED
+*This do file will produce the following table in excel:
+Tables_coverage:	Contains the tables for HIV testing coverage for women, men, and total. THESE TABLES ARE UNWEIGHTED
 *
-Notes: 	Line 34 selects for the age group of interest for the coverage indicators
-	The default is age 15-49. For all other tables (except couples) the default was set as 15-49 in the master file
-	Not all surveys have testing that distinguish between HIV-1 and HIV-2. These tables are commented out in line 135 Uncomment if you need them. 
+Notes: 	Line 28 selects for the age group of interest for the coverage indicators
+Not all surveys have testing that distinguish between HIV-1 and HIV-2. These tables are commented out in line 135 Uncomment if you need them. 
 		
 *****************************************************************************************************.
 * the total will show on the last row of each table.

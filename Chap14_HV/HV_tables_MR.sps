@@ -5,7 +5,7 @@ Purpose: 			produce tables for indicators
 Author:				Ivana Bjelic
 Date last modified: April 1, 2020 by Ivana Bjelic
 
-*Note this do file will produce the following tables in excel:
+*This do file will produce the following tables in excel:
 	1.	Tables_prev_wm:	Contains the tables for HIV prevalence for women
 	2.	Tables_prev_mn:	Contains the tables for HIV prevalence for men
 	3.	Tables_prev_tot:	Contains the tables for HIV prevalence for total
@@ -13,7 +13,8 @@ Date last modified: April 1, 2020 by Ivana Bjelic
 	5.	Tables_prev_cpl:	Contains the tables for HIV prevalence for couples
 *
 Notes: 	Not all surveys have testing that distinguish between HIV-1 and HIV-2. These tables are commented out in lines 102-162. Uncomment if you need them. 
-		
+	
+*The default is age 15-49. For all other tables (except couples) the default was set as 15-49 in line 30.
 *****************************************************************************************************.
 * the total will show on the last row of each table.
 * comment out the tables or indicator section you do not want.
@@ -23,19 +24,17 @@ Notes: 	Not all surveys have testing that distinguish between HIV-1 and HIV-2. T
    *crosstabs to crosstabs
    *frequencies to frequencies.
 
-
-****************************************************************************
-****************************************************************************
-
-* indicators from MR file.
-
 * These tables actually use the IRMRARmerge.sav file and not the MR file
+
+* limiting to men age 15-49.
+select if not(mv012<15 | mv012>49).
 
 * use HIV weight.
 compute wt=hiv05/1000000.
 
 weight by wt.
 
+* indicators from MR file.
 **************************************************************************************************
 * HIV prevalence
 **************************************************************************************************

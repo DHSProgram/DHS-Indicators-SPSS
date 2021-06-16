@@ -5,8 +5,11 @@ Purpose: 			produce tables for indicators
 Author:				 Ivana Bjelic
 Date last modified: August 31 2019 by Ivana Bjelic
 
-*Note this do file will produce the following tables in excel:
+*This do file will produce the following table in excel:
 Tables_IPTP:		Contains tables on IPTp uptake
+
+*Notes: For women the indicators are outputed for age 15-49 in line 25. 
+*This can be commented out if the indicators are required for all women.		
 *****************************************************************************************************/
 * the total will show on the last row of each table.
 * comment out the tables or indicator section you do not want.
@@ -18,6 +21,9 @@ Tables_IPTP:		Contains tables on IPTp uptake
    *crosstabs to crosstabs
    *frequencies to frequencies.
 
+* limiting to women age 15-49.
+select if not(v012<15 | v012>49).
+
 compute wt=v005/1000000.
 
 weight by wt.
@@ -25,7 +31,6 @@ weight by wt.
 * create denominators.
 if age<24 num=1.
 variable labels num "Number".
-
 
 * the total will show on the last row of each table.
 * comment out the tables or indicator section you do not want.

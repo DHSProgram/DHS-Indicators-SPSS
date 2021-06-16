@@ -2,18 +2,14 @@
 *****************************************************************************************************
 Program: 			PH_GINI.sps
 Purpose: 			Code to compute the Gini coefficient
-Data inputs: 		PR survey list
+Data inputs: 		PR dataset
 Data outputs:		coded variables
 Author:				Tom Pullum, modified by Shireen Assaf for this project, translated to SPSS by Ivana Bjelic
 Date last modified: July 28, 2020 by Ivana Bjelic
 Note:				This program will collapse the data and export the results to a table called Table_gini.xls
-			                  The programs below contain many notes to describe how the Gini coefficient was computed. 
-
+			         The programs below contain many notes to describe how the Gini coefficient was computed. 
 
 *****************************************************************************************************.
-
-***************************************************************************************
-***************************************************************************************
 
 * EXECUTION BEGINS HERE
 

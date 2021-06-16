@@ -2,7 +2,7 @@
 *******************************************************************************************************
 Program: 			CH_STOOL.sps
 Purpose: 			Code disposal of child's stook variable
-Data inputs: 		KR survey list
+Data inputs: 		KR dataset
 Data outputs:		coded variables
 Author:				Shireen Assaf and translated to SPSS by Ivana Bjelic
 Date last modified: September 06 2019 by Ivana Bjelic

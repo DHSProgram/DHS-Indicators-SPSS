@@ -2,7 +2,7 @@
  * /*****************************************************************************************************
 Program: 			RH_ANC.do
 Purpose: 			Code PNC indicators for women and newborns
-Data inputs: 		IR survey list
+Data inputs: 		IR dataset
 Data outputs:		coded variables
 Author:				Lindsay Mallick and Shireen Assaf, translated to SPSS by Ivana Bjelic
 Date last modified: June 29 2019 by Ivana Bjelic 

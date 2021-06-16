@@ -2,7 +2,7 @@
 ******************************************************************************************************
 Program: 			FE_CBR.sps
 Purpose: 			Code to calculate Crude Birth Rate
-Data inputs: 		PR data files
+Data inputs: 		PR dataset
 Data outputs:		coded variables
 Author:				Courtney Allen for the code share project and translated to SPSS by Ivana Bjelic
 Date last modified: August 25, 2020 by Ivana Bjelic

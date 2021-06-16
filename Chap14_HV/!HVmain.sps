@@ -143,9 +143,6 @@ erase file =  datapath + "\IRARtemp.sav".
 erase file =  datapath + "\MRARtemp.sav".
 erase file =  datapath + "\temp.sav".
 
-* limiting to age 15-49, you can comment this out if you want all men.
-select if  (v012<=49).
-
 insert file = "HV_PREV_MR.sps".
 *Purpose: 	Code for HIV prevalence.
 
@@ -159,8 +156,9 @@ save outfile = datapath + "\IRMRARmerge.sav".
 
 insert file = "HV_tables_MR.sps".
 *Purpose: 	Produce tables for indicators computed from the above sps files.
+* Note:		This will drop any women and men not in 15-49 age range. You can change this selection. Please check the notes in the do file.
 
-* erase merged file. Comment out if you would like to keep this file
+*erase merged file. Comment out if you would like to keep this file
 *erase IRMRARmerge.dta
 
 */

@@ -2,7 +2,7 @@
 *****************************************************************************************************
 Program: 			PH_HNDWSH.sps
 Purpose: 			Code to compute handwashing indicators
-Data inputs: 		PR survey list
+Data inputs: 		PR dataset
 Data outputs:		coded variables
 Author:				Shireen Assaf and translated to SPSS by Ivana Bjelic
 Date last modified: June 16, 2020 by Ivana Bjelic

@@ -2,13 +2,11 @@
 *****************************************************************************************************
 Program: 			HK_STI_MR.sps
 Purpose: 			Code for STI indicators
-Data inputs: 		MR survey list
+Data inputs: 		MR dataset
 Data outputs:		coded variables
 Author:				Shireen Assaf and translated to SPSS by Ivana Bjelic
 Date last modified: Nov 29, 2019 by Ivana Bjelic
-Note:				The indicators below can be computed for men and women. 
-*					For men the indicators are computed for age 15-49 in line 30. 
-*					This can be commented out if the indicators are required for all men.
+Note:				The indicators below can be computed for men and women. No age selection is made here.
 			
 *****************************************************************************************************/
 
@@ -19,18 +17,14 @@ hk_computet_disch		"Had an abnormal (or bad-smelling) computeital discharge in t
 hk_computet_sore		"Had a computeital sore or ulcer in the past 12 months"
 hk_sti_symp		"Had an STI or STI symptoms in the past 12 months"
 hk_sti_trt_doc		"Had an STI or STI symptoms in the past 12 months and sought advice or treatment from a clinic/hospital/private doctor"
-hk_sti_trt_pharm	                  "Had an STI or STI symptoms in the past 12 months and sought advice or treatment from a pharmacy"
-hk_sti_trt_other	                  "Had an STI or STI symptoms in the past 12 months and sought advice or treatment from any other source"
-hk_sti_notrt		                  "Had an STI or STI symptoms in the past 12 months and sought no advice or treatment"
+hk_sti_trt_pharm	 "Had an STI or STI symptoms in the past 12 months and sought advice or treatment from a pharmacy"
+hk_sti_trt_other	 "Had an STI or STI symptoms in the past 12 months and sought advice or treatment from any other source"
+hk_sti_notrt		"Had an STI or STI symptoms in the past 12 months and sought no advice or treatment"
 ----------------------------------------------------------------------------.
 
 * indicators from MR file.
 
-* limiting to men age 15-49.
-select if mv012<=49.
-
 **************************
-
 *STI in the past 12 months.
 do if mv525<>0 and mv525<>99 and not sysmis(mv525). 
 +compute hk_sti=0.

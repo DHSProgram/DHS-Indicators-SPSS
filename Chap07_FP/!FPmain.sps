@@ -65,7 +65,7 @@ insert file = "FP_COMM_IR.sps".
 *.
 insert file = "FP_tables_IR.sps".
 * Purpose: 	Produce tables for indicators computed from above do files. 
-
+*Note:		This will drop any women not in 15-49 age range. You can change this selection. Please check the notes in the do file.
 
 */
 *******************************************************************************************************************************
@@ -87,6 +87,7 @@ insert file = "FP_COMM_MR.sps".
 *.
 insert file = "FP_tables_MR.sps".
 * Purpose: 	Produce tables for indicators computed from above do files. 
+*Note:		This will drop any men not in 15-49 age range. You can change this selection. Please check the notes in the do file.
 
 */
 *******************************************************************************************************************************

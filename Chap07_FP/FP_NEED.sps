@@ -2,7 +2,7 @@
  * /*****************************************************************************************************
 Program: 			FP_Need.sps
 Purpose: 			Code contraceptive unmet need, met need, demand satisfied, intention to use
-Data inputs: 		IR survey list
+Data inputs: 		IR dataset
 Data outputs:		coded variables
 Author:				Shireen Assaf and translated to SPSS by Ivana Bjelic
 Date last modified: Aug 06 2019 by Ivana Bjelic

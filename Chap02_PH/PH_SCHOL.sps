@@ -2,7 +2,7 @@
 *****************************************************************************************************
 Program: 			PH_SCHOL.sps
 Purpose: 			Code to compute school attendance indicators
-Data inputs: 		BR and PR survey list
+Data inputs: 		BR and PR dataset
 Data outputs:		coded variables
 Author:				Trevor Croft, translated to SPSS by Ivana Bjelic
 Date last modified: August 11, 2020 by Ivana Bjelic

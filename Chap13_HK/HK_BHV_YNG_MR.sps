@@ -2,11 +2,11 @@
 *****************************************************************************************************
 Program: 			HK_BHV_YNG_MR.sps
 Purpose: 			Code for sexual behaviors among young people
-Data inputs: 		MR survey list
+Data inputs: 		MR dataset
 Data outputs:		coded variables
 Author:				Shireen Assaf and translated to SPSS by Ivana Bjelic
 Date last modified: Nov 29, 2019 by Ivana Bjelic
-Note:				The indicators below can be computed for men and women. 
+Note:				The indicators below can be computed for men and women. No age selection is made here. 
 			
 *****************************************************************************************************/
 

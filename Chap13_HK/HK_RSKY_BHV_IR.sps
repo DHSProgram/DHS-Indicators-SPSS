@@ -2,13 +2,11 @@
 *****************************************************************************************************
 Program: 			HK_RSKY_BHV_IR.sps
 Purpose: 			Code to compute Multiple Sexual Partners, Higher-Risk Sexual Partners, and Condom Use
-Data inputs: 		IR survey list
+Data inputs: 		IR dataset
 Data outputs:		coded variables
 Author:				Shireen Assaf and translated to SPSS by Ivana Bjelic
 Date last modified: November 29, 2019 by Ivana Bjelic
-Note:				The indicators below can be computed for men and women. 
-*					For women the indicators are computed for age 15-49 in line 29. 
-*					This can be commented out if the indicators are required for all women or can be changed to select for age 15-24.	
+Note:				The indicators below can be computed for men and women. No age selection is made here.
 					
 *					For the indicator hk_cond_notprtnr, please see the DHS guide to statistics for changes over time.
 *					The current code will only match recent surveys. 					
@@ -24,9 +22,6 @@ hk_sexprtnr_mean 	"Mean number of sexual partners"
 ----------------------------------------------------------------------------.
 
 * indicators from IR file.
-
-* limiting to women age 15-49.
-select if v012<=49.
 
 **********************************
 *Two or more sexual partners.

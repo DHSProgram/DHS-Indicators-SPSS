@@ -5,11 +5,10 @@ Purpose: 			produce tables for fertility indicators
 Author:				Ivana Bjelic
 Date last modified: September 29 2020 by Ivana Bjelic
 
-*Note this do file will produce the following tables in excel:
-	1. 	FE_tables:		Contains the tables for most fertility indicators created in the FE_INT sps file.
+*This do file will produce the following table in excel:
+	FE_tables:		Contains the tables for most fertility indicators created in the FE_INT sps file.
 
-*
-Notes: 
+*Notes: 
 *****************************************************************************************************
 
 * the total will show on the last row of each table.

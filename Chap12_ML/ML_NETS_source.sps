@@ -2,7 +2,7 @@
 *****************************************************************************************************
 Program: 			ML_NETS_source.do
 Purpose: 			Code indicators for source of nets
-Data inputs: 		HR survey list
+Data inputs: 		HR dataset
 Data outputs:		coded variables and the table Tables_Net_Source.xls for the tabulations for the indicators
 Author:				Cameron Taylor and modified by Shireen Assaf for the code share project, translated to SPSS by Ivana Bjelic
 Date last modified: August 30 2019 by Ivana Bjelic

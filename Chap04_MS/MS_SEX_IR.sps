@@ -2,7 +2,7 @@
 *******************************************************************************
 Program: 			MS_SEX_IR.sps
 Purpose: 			Code to create sexual activity indicators
-Data inputs: 		IR survey list
+Data inputs: 		IR dataset
 Data outputs:		coded variables and scalars
 Author:				Courtney Allen and translated to SPSS by Ivana Bjelic
 Date last modified: September 29, 2019 by Ivana Bjelic

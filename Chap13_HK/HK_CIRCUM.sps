@@ -2,12 +2,11 @@
 *****************************************************************************************************
 Program: 			HK_CIRCUM.sps
 Purpose: 			Code for indicators on male circumcision
-Data inputs: 		MR survey list
+Data inputs: 		MR dataset
 Data outputs:		coded variables
 Author:				Shireen Assaf and translated to SPSS by Ivana Bjelic
 Date last modified: Nov 28, 2019 by Ivana Bjelic
-Note:				The indicators are computed for me age 15-49 in line 23. 
-*					This can be commented out if the indicators are required for all men.
+Note:				The indicators are computed for all men. No age selection is made here. 
 			
 *****************************************************************************************************.
 
@@ -19,11 +18,7 @@ hk_circum_status_prov	                  "Circumcision status and provider"
 
 * Indicators from MR file.
 
-* limiting to men age 15-49.
-select if mv012<=49.
-
 **************************
-
 *Circumcised.
 compute hk_circum=0.
 if (mv483=1) hk_circum=1.

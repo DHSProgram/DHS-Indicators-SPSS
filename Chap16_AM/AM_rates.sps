@@ -2,7 +2,7 @@
 *****************************************************************************************************
 Program: 			AM_RATES.sps
 Purpose: 			Code to produce adult and maternal mortality rates for specific windows of time
-Data inputs: 		IR survey list
+Data inputs: 		IR dataset
 Data outputs:		AM_Tables.xlsx and AM_completeness.xlsx
 Author:				Trevor Croft and modified by Ivana Bjelic for the code share project
 Date last modified: February 16, 2021 by Ivana Bjelic

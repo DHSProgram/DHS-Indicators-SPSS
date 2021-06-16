@@ -2,7 +2,7 @@
 *****************************************************************************************************
 Program: 			FE_TFR.sps
 Purpose: 			Code to compute fertility rates
-Data inputs: 		IR survey list
+Data inputs: 		IR dataset
 Data outputs:		coded variables
 Author:				Thomas Pullum and modified by Courtney Allen for the code share project and translated to SPSS by Ivana Bjelic
 Date last modified: August 11 2020 by Ivana Bjelic

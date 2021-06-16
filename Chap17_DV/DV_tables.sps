@@ -5,12 +5,13 @@ Purpose: 			produce tables for domestic violence indicators
 Author:				Ivana Bjelic
 Date last modified: September 16 2020 by Ivana Bjelic
 
-*Note this do file will produce the following tables in excel:
+*This do file will produce the following tables in excel:
 	1. 	Tables_DV_viol:	Contains the tables for indicators of experiencing violence ever and help seeking
 	2. 	Tables_DV_cntrl:	Contains the tables for marital control indicators
 	3. 	Tables_DV_prtnr:	Contains the tables for indicators of experiencing violence by their partners ever and help seeking
 *
-Notes: 
+*Notes: For women the indicators are outputed for age 15-49 in line 28. 
+*This can be commented out if the indicators are required for all women.	
 *****************************************************************************************************/
 * the total will show on the last row of each table.
 * comment out the tables or indicator section you do not want.
@@ -22,6 +23,9 @@ Notes:
    *frequencies to frequencies.
 *
 subgroups dv_age residence region marital work livingchild education wealth.
+
+* limiting to women age 15-49.
+select if not(v012<15 | v012>49).
 
 *generate weight variable.
 compute wt = v005/1000000.

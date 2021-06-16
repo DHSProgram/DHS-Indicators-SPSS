@@ -5,10 +5,10 @@ Purpose: 			produce tables for indicators
 Author:				Ivana Bjelic
 Date last modified: August 31 2019 by Ivana Bjelic
 
-*Note this do file will produce the following tables in excel:
+*This do file will produce the following tables in excel:
 	1. Tables_HH_ITN_USE:	\Contains the tables for ITN use among de facto population, children, and pregnant women
 	2. Tables_MAL_ANEMIA:	Contains the table for children 6–59 months old tested for anemia and tables for children with severe anemia (<8.0 g/dL)
-	3. 	Tables_MALARIA:		Contains the table for children 6-59 months old tested for malaria and children with malaria infection via RDT and microscopy
+	3. Tables_MALARIA:		Contains the table for children 6-59 months old tested for malaria and children with malaria infection via RDT and microscopy
 *****************************************************************************************************/
 * the total will show on the last row of each table.
 * comment out the tables or indicator section you do not want.

@@ -2,7 +2,7 @@
 *****************************************************************************************************
 Program: 			CH_KNOW_ORS.do
 Purpose: 			Code knowledge of ORS variable
-Data inputs: 		IR survey list
+Data inputs: 		IR dataset
 Data outputs:		coded variables
 Author:				Shireen Assaf and translated to SPSS by Ivana Bjelic
 Date last modified: September 01 2019 by Ivana Bjelic

@@ -6,18 +6,20 @@ Purpose: 			produce tables for indicators
 Author:				Ivana Bjelic
 Date last modified: November 28 2019 by Ivana Bjelic
 
-*Note this do file will produce the following tables in excel:
+*This do file will produce the following tables in excel:
 	1.	Tables_know_mn:	Contains the tables for HIV/AIDS knowledge indicators for men
 	2.	Tables_atd_mn:	Contains the tables for HIV/AIDS attitude indicators for men
 	3.	Tables_rsky_mn: 	Contains the tables for risky sexual behaviors for men
 	4.	Tables_test_mn: 	Contains the tables for HIV prior testing and counseling for men
 	5.	Tables_circum:	Contains the tables for circumcision indicators
-	6.               Tables_sti_mn:	Contains the tables for STI indicators for men
-	7.               Tables_bhv_yng_mn:	Contains the table for sexual behavior among young people for men
+	6. Tables_sti_mn:	Contains the tables for STI indicators for men
+	7. Tables_bhv_yng_mn:	Contains the table for sexual behavior among young people for men
 
 *Notes:	Several tables in the final reports are reported about young people (15-24). 
 *To produce these tables you can rerun the code among young people age group using v013 by droping cases over 24 years (i.e select if v013<=2).
 
+*For men the indicators are outputed for age 15-49 in line 33. 
+*This can be commented out if the indicators are required for all men or changed for the age group 15-24. 
 *****************************************************************************************************/
 * the total will show on the last row of each table.
 * comment out the tables or indicator section you do not want.
@@ -27,11 +29,9 @@ Date last modified: November 28 2019 by Ivana Bjelic
    *crosstabs to crosstabs
    *frequencies to frequencies.
 
+* limiting to men age 15-49.
+select if not(mv012<15 | mv012>49).
 
-****************************************************************************
-****************************************************************************
-
-* indicators from MR file.
 compute wt=mv005/1000000.
 
 weight by wt.
@@ -40,7 +40,7 @@ weight by wt.
 compute num=1.
 variable labels num "Number".
 
-
+* indicators from MR file.
 **************************************************************************************************
 * Knowledge and Attitudes towards HIV/AIDS
 **************************************************************************************************

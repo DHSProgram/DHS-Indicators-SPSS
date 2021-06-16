@@ -2,7 +2,7 @@
 *****************************************************************************************************
 Program: 			CM_CHILD.sps
 Purpose: 			Produce child mortality indicators 
-Data inputs: 		IR survey list
+Data inputs: 		IR dataset
 Data outputs:		coded variables
 Author:			Trevor Croft and modified by Ivana Bjelic for the code share project
 Date last modified:                           March 29, 2021 by Trevor Croft

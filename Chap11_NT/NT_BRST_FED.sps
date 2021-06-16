@@ -2,7 +2,7 @@
 ****************************************************************************************************
 Program: 			NT_BRST_FED.sps
 Purpose: 			Code to compute breastfeeding indicators
-Data inputs: 		KR file
+Data inputs: 		KR dataset
 Data outputs:		coded variables
 Author:				Shireen Assaf and translated to SPSS by Ivana Bjelic
 Date last modified: May 16 2020 by Ivana Bjelic

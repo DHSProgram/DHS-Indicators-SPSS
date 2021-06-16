@@ -5,8 +5,8 @@ Purpose: 			produce tables for indicators
 Author:				Ivana Bjelic
 Date last modified: May 18 2020 by Ivana Bjelic
 
-*Note this do file will produce the following tables in excel:
-	1. 	Tables_salt_hh:	Contains the tables for salt testing and iodized salt in households
+*This do file will produce the following table in excel:
+	Tables_salt_hh:	Contains the tables for salt testing and iodized salt in households
 *****************************************************************************************************/
 * the total will show on the last row of each table.
 * comment out the tables or indicator section you do not want.

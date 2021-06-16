@@ -5,7 +5,7 @@ Purpose: 			produce tables for indicators
 Author:				Ivana Bjelic
 Date last modified: August 31 2019 by Ivana Bjelic
 
-*Note this do file will produce the following tables in excel:
+*This do file will produce the following tables in excel:
 	1. 	Tables_FEVER:		Contains tables on fever careseeking for children under 5 (fever, treatment seeking)
 	2. 	Tables_Antimal:		Contains tables for antimalarial drugs
 *****************************************************************************************************/

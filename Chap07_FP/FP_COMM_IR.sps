@@ -3,7 +3,7 @@
 *****************************************************************************************************
 Program: 			FP_COMM_IR.sps
 Purpose: 			Code communication related indicators: exposure to FP messages, decision on use/nonuse, discussions. 
- * Data inputs: 		IR survey list
+ * Data inputs: 		IR dataset
 Data outputs:		coded variables
 Author:			Shireen Assaf and translated to SPSS by Ivana Bjelic
 Date last modified: Aug 06 2019 by Ivana Bjelic

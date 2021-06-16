@@ -2,7 +2,7 @@
 *****************************************************************************************************
 Program: 			NT_SALT.sps
 Purpose: 			Code to compute salt indicators in households
-Data inputs: 		HR file
+Data inputs: 		HR dataset
 Data outputs:		coded variables
 Author:				Shireen Assaf and translated to SPSS by Ivana Bjelic
 Date last modified: May 18 2020 by Ivana Bjelic

@@ -2,7 +2,7 @@
 *****************************************************************************************************
 Program: 			HV_PREV_MR.sps
 Purpose: 			Code for HIV prevalence
-Data inputs: 		MR survey list
+Data inputs: 		MR dataset
 Data outputs:		coded variables
 Author:				Shireen Assaf and translated to SPSS by Ivana Bjelic
 Date last modified: April 01, 2020 by Ivana Bjelic

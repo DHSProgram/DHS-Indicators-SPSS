@@ -5,11 +5,12 @@ Purpose: 			produce tables for indicators
 Author:				Ivana Bjelic
 Date last modified: October 27, 2020 by Ivana Bjelic
 
-*Note this do file will produce the following tables in excel:
-	1. 	Tables_Know:                        Contains the tables for heard of female circumcision among women and men 
-	2.	Tables_Opinion:                     Contains the tables for opinions related to female circumcision among women and men 
+*This do file will produce the following tables in excel:
+	1. Tables_Know: Contains the tables for heard of female circumcision among women and men 
+	2.	Tables_Opinion: Contains the tables for opinions related to female circumcision among women and men 
 
-* We select for the age groups 15-49 for both men and women. If you want older ages in men please change this selection in the code below (line 31). 
+*Notes: For men the indicators are outputed for age 15-49 in line 26. 
+*This can be commented out if the indicators are required for all men.		
 *****************************************************************************************************/
 
 * the total will show on the last row of each table.
@@ -21,15 +22,13 @@ Date last modified: October 27, 2020 by Ivana Bjelic
    *crosstabs to crosstabs
    *frequencies to frequencies.
 
-
-* indicators from MR file.
+* limiting to men age 15-49.
+select if not(mv012<15 | mv012>49).
 
 compute wt=mv005/1000000.
 weight by wt.
 
-*select age group.
-select if mv012>=15 and mv012<=49.
-
+* indicators from MR file.
 ****************************************************************************
 *Heard of female circumcision.
 ctables

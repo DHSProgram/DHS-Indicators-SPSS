@@ -2,7 +2,7 @@
 *****************************************************************************************************
 Program: 			NT_WM_NUT.sps
 Purpose: 			Code to compute anthropometry and anemia indicators in women
-Data inputs: 		IR file
+Data inputs: 		IR dataset
 Data outputs:		coded variables
 Author:				Shireen Assaf and translated to SPSS by Ivana Bjelic
 Date last modified: May 16 2020 by Ivana Bjelic

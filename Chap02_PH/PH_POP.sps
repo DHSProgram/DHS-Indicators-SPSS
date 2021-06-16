@@ -2,7 +2,7 @@
 *****************************************************************************************************
 Program: 			PH_POP.sps
 Purpose: 			Code to compute population characteristics, birth registration, education levels, household composition, orphanhood, and living arrangments
-Data inputs: 		PR survey list
+Data inputs: 		PR dataset
 Data outputs:		coded variables
 Author:				Shireen Assaf and translated to SPSS by Ivana Bjelic
 Date last modified: July 24, 2020 by Ivana Bjelic

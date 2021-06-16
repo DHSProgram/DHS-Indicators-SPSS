@@ -2,7 +2,7 @@
 *****************************************************************************************************
 Program: 			FF_WANT_TFR.sps
 Purpose: 			Code to compute wanted fertility rates
-Data inputs: 		IR survey list
+Data inputs: 		IR dataset
 Data outputs:		coded variables
 Author:				Thomas Pullum modified by Shireen Assaf for the code share project and translated to SPSS by Ivana Bjelic
 Date last modified: September 29 2019 by Ivana Bjelic

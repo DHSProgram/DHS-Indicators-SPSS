@@ -5,16 +5,15 @@ Purpose: 			produce tables for indicators
 Author:				Ivana Bjelic
 Date last modified: October 27, 2020 by Ivana Bjelic
 
-*Note this do file will produce the following tables in excel:
-	1. 	Tables_Know:                        Contains the tables for heard of female circumcision among women and men 
-	2. 	Tables_Circum_wm:               Contains the tables for female circumcision prevalence, type, age of circumcision, and who performed the circumcision
+*This do file will produce the following tables in excel:
+	1. Tables_Know:                        Contains the tables for heard of female circumcision among women and men 
+	2. Tables_Circum_wm:               Contains the tables for female circumcision prevalence, type, age of circumcision, and who performed the circumcision
 	3.	Tables_Opinion:                     Contains the tables for opinions related to female circumcision among women and men 
-
 
 *Notes: 	Tables_Circum_gl that show the indicators of female circumcision among girls 0-14 is produced in the FG_GIRLS.sps file.
 
-* We select for the age groups 15-49 for both men and women.
-* Most surveys for women are only for 15-49, but a few surveys have older surveys so this selection can be necessary (line 36). 
+*Notes: For women the indicators are outputed for age 15-49 in line 29. 
+*This can be commented out if the indicators are required for all women.			
 *****************************************************************************************************/
 
 * the total will show on the last row of each table.
@@ -25,16 +24,14 @@ Date last modified: October 27, 2020 by Ivana Bjelic
     ctables to *ctables.
    *crosstabs to crosstabs
    *frequencies to frequencies.
-*
 
-* indicators from IR file.
+* limiting to women age 15-49.
+select if not(v012<15 | v012>49).
 
 compute wt=v005/1000000.
 weight by wt.
 
-*select age group.
-select if v012>=15 and v012<=49.
-
+* indicators from IR file.
 **************************************************************************************************
 *Heard of female circumcision.
 ctables

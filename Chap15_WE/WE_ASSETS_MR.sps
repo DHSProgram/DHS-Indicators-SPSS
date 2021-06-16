@@ -2,7 +2,7 @@
 *****************************************************************************************************
 Program: 			WE_ASSETS_MR.sps
 Purpose: 			Code to compute employment, earnings, and asset ownership in men and women
-Data inputs: 		MR survey list
+Data inputs: 		MR dataset
 Data outputs:		coded variables
 Author:				Shireen Assaf and translated to SPSS by Ivana Bjelic
 Date last modified: Oct 19, 2019 by Ivana Bjelic
@@ -28,9 +28,6 @@ we_mobile_finance            	"Use mobile phone for financial transactions"
 ----------------------------------------------------------------------------.
 
 * indicators from MR file
-
-* limiting to men age 15-49.
-select if (mv012<=49).
 
 *** Employment and earnings ***
 

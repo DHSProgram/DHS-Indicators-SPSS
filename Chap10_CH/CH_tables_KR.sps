@@ -5,7 +5,7 @@ Purpose: 			produce tables for indicators
 Author:				Ivana Bjelic
 Date last modified: September 01 2019 by Ivana Bjelic
 
-*Note this do file will produce the following tables in excel:
+*This do file will produce the following tables in excel:
 	1. 	Tables_Size:		Contains the tables for child's size indicators
 	2.	Tables_ARI_FV.xls:	Contains the tables for ARI and fever indicators
 	3.	Tables_DIAR.xls:	Contains the tables for diarrhea indicators

@@ -5,13 +5,19 @@ Purpose: 			produce tables for high risk birth and high risk fertility behavior
 Author:			Ivana Bjelic
 Date last modified: October 09, 2019 by Ivana Bjelic
 
-*Note this do file will produce the following tables in excel:
+*This do file will produce the following tables in excel:
 	1. 	Table_Risk_wm:	Contains the tables of high risk fertilty behavior indicators among women
+
+*Notes: For women the indicators are outputed for age 15-49 in line 30. 
+*This can be commented out if the indicators are required for all women.	
 *****************************************************************************************************.
 
 **************************************************************************************************
 * High risk fertility indicators amoung women 
 **************************************************************************************************.
+
+* limiting to women age 15-49.
+select if not(v012<15 | v012>49).
 
 compute wt=v005/1000000.
 weight by wt.

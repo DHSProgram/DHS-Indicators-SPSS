@@ -2,7 +2,7 @@
 *****************************************************************************************************
 Program: 			NT_CH_NUT.sps
 Purpose: 			Code to compute anthropometry and anemia indicators in children
-Data inputs: 		PR file
+Data inputs: 		PR dataset
 Data outputs:		coded variables
 Author:				Shireen Assaf and translated to SPSS by Ivana Bjelic
 Date last modified: May 16 2020 by Ivana Bjelic

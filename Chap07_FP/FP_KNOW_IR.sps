@@ -2,7 +2,7 @@
  * /*****************************************************************************************************
 Program: 			FP_KNOW_IR.sps
 Purpose: 			Code contraceptive knowledge indicators
-Data inputs: 		IR survey list
+Data inputs: 		IR dataset
 Data outputs:		coded variables
 Author:				Shireen Assaf and translated to SPSS by Ivana Bjelic
 Date last modified: Aug 15 2019 by Ivana Bjelic

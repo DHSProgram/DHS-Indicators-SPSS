@@ -2,30 +2,29 @@
 *****************************************************************************************************
 Program: 			RC_CHAR_IR.sps
 Purpose: 			Code to compute respondent characteristics in men and women
-Data inputs: 		IR survey list
+Data inputs: 		IR dataset
 Data outputs:		coded variables
 Author:				Shireen Assaf and translated to SPSS by Ivana Bjelic
 Date last modified: October 12 2019 by Ivana Bjelic
 Note:				The indicators below can be computed for men and women
-					For women the indicator is computed for age 15-49 in line 55. This can be commented out if the indicators are required for all women
 					Please check the note on health insurance. This can be country specific and also reported for specific populations. 
 *****************************************************************************************************/
 
 *----------------------------------------------------------------------------
 Variables created in this file:
-rc_edu			"Highest level of schooling attended or completed"
-rc_edu_median		"Median years of education"
-rc_litr_cats		                  "Level of literacy"
-rc_litr			"Literate - higher than secondary or can read part or whole sentence"
-rc_media_newsp		"Reads a newspaper at least once a week"
-rc_media_tv			"Watches television at least once a week"
-rc_media_radio		"Listens to radio at least once a week"
-rc_media_allthree            	"Accesses to all three media at least once a week"
-rc_media_none		"Accesses none of the three media at least once a week"
+rc_edu               "Highest level of schooling attended or completed"
+rc_edu_median   "Median years of education"
+rc_litr_cats         "Level of literacy"
+rc_litr			               "Literate - higher than secondary or can read part or whole sentence"
+rc_media_newsp   "Reads a newspaper at least once a week"
+rc_media_tv          "Watches television at least once a week"
+rc_media_radio     "Listens to radio at least once a week"
+rc_media_allthree  "Accesses to all three media at least once a week"
+rc_media_none		   "Accesses none of the three media at least once a week"
 rc_intr_ever        		"Ever used the internet"
 rc_intr_use12mo		"Used the internet in the past 12 months"
-rc_intr_usefreq		"Internet use frequency in the past month - among users in the past 12 months"
-rc_empl			"Employment status"
+rc_intr_usefreq		   "Internet use frequency in the past month - among users in the past 12 months"
+rc_empl		   	"Employment status"
 rc_occup			"Occupation among those employed in the past 12 months"
 rc_empl_type		"Type of employer among those employed in the past 12 months"
 rc_empl_earn		"Type of earnings among those employed in the past 12 months"
@@ -48,9 +47,6 @@ rc_tobc_any			"Uses any type of tobacco - smoke or smokeless"
 ----------------------------------------------------------------------------*/
 
 * indicators from IR file.
-
-* limiting to women age 15-49.
-select if not(v012>49).
 
 *** Education ***.
 

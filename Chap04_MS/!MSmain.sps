@@ -45,15 +45,15 @@ define country()
 * open dataset.
 get file =  datapath + "\"+ irdata + ".sav".
 
-*Purpose: 	Code marital status variables.
 insert file = "MS_MAR_IR.sps".
+*Purpose: 	Code marital status variables.
 
-*Purpose: 	Code sexual activity variables.
 insert file = "MS_SEX_IR.sps".
+*Purpose: 	Code sexual activity variables.
 
-*Purpose: 	Produce tables for indicators computed from above do files. 
 insert file = "MS_tables_IR.sps".
-
+*Purpose: 	Produce tables for indicators computed from above do files. 
+* Note:		This will drop any women not in 15-49 age range. You can change this selection. Please check the notes in the do file.
 *
 *******************************************************************************************************************************
 *******************************************************************************************************************************
@@ -63,14 +63,15 @@ insert file = "MS_tables_IR.sps".
 * open dataset.
 get file =  datapath + "\"+ mrdata + ".sav".
 
-*Purpose: 	Code marital status variables.
 insert file = "MS_MAR_MR.sps".
+*Purpose: 	Code marital status variables.
 
-*Purpose: 	Code sexual activity variables.
 insert file = "MS_SEX_MR.sps".
+*Purpose: 	Code sexual activity variables.
 
-*Purpose: 	Produce tables for indicators computed from above do files. 
 insert file = "MS_tables_MR.sps".
+*Purpose: 	Produce tables for indicators computed from above do files. 
+* Note:		This will drop any men not in 15-49 age range. You can change this selection. Please check the notes in the do file.
 */
 *******************************************************************************************************************************
 *******************************************************************************************************************************

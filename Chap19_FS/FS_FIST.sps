@@ -2,7 +2,7 @@
 *****************************************************************************************************
 Program: 			FS_FIST.sps
 Purpose: 			Code to compute fistula indicators among women
-Data inputs: 		IR survey list
+Data inputs: 		IR dataset
 Data outputs:		coded variables
 Author:				Shireen Assaf and translated to SPSS by Ivana Bjelic
 Date last modified: December 02, 2020 by Shireen Assaf 

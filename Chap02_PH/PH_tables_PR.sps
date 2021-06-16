@@ -5,10 +5,10 @@ Purpose: 			produce tables for indicators
 Author:				Ivana Bjelic
 Date last modified: July 17 2020 by Ivana Bjelic
 
-*Note this do file will produce the following tables in excel:
+*This do file will produce the following tables in excel:
 	1.	Tables_handwsh:		Contains the table for handwashing indicators
-*
-Notes: 					 						
+
+*Notes: 					 						
 *****************************************************************************************************
 
 * the total will show on the last row of each table.

@@ -5,9 +5,11 @@ Purpose: 			produce tables for indicators of fertility preferences chapter
 Author:				Ivana Bjelic
 Date last modified: September 20 2019 by Ivana Bjelic
 
-*Note this do file will produce the following tables in excel:
+*This do file will produce the following tables in excel:
 	1. 	Tables_Pref_mn:	Contains tables for fertility preferences for men 
 
+*Notes: For men the indicators are outputed for age 15-49 in line 25. 
+*This can be commented out if the indicators are required for all men.		
 *****************************************************************************************************.
 
 * the total will show on the last row of each table.
@@ -18,6 +20,9 @@ Date last modified: September 20 2019 by Ivana Bjelic
     ctables to *ctables.
    *crosstabs to crosstabs
    *frequencies to frequencies.
+
+* limiting to men age 15-49.
+select if not(mv012<15 | mv012>49).
 
 compute wt=mv005/1000000.
 weight by wt.

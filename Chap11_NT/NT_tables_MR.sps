@@ -5,10 +5,12 @@ Purpose: 			produce tables for indicators
 Author:				Ivana Bjelic
 Date last modified: May 18 2020 by Ivana Bjelic
 
-*Note this do file will produce the following tables in excel:
+*This do file will produce the following tables in excel:
 	1. 	Tables_nut_mn:	Contains the tables for nutritional status indicators for men
 	2.	Tables_anemia_mn:	Contains the tables for anemia indicators for men
-Note: The tables produced for men (MR file) select for men 15-49. If all men are needed please comment out line 35
+
+*Notes: For men the indicators are outputed for age 15-49 in line 29. 
+*This can be commented out if the indicators are required for all men.	
 *****************************************************************************************************/
 * the total will show on the last row of each table.
 * comment out the tables or indicator section you do not want.
@@ -23,11 +25,13 @@ Note: The tables produced for men (MR file) select for men 15-49. If all men are
 * comment out the tables or indicator section you do not want.
 ****************************************************
 
-* indicators from MR file.
+* limiting to men age 15-49.
+select if not(mv012<15 | mv012>49).
 
 compute wt=mv005/1000000.
 weight by wt.
 
+* indicators from MR file.
 **************************************************************************************************
 * background variables.
 

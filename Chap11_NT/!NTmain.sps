@@ -178,7 +178,7 @@ insert file = "NT_WM_NUT.sps".
 
 insert file = "NT_tables_IR.sps".
 *Purpose: 	Produce tables for indicators computed from above sps files. 
-
+* Note:		This will drop any women not in 15-49 age range. You can change this selection. Please check the notes in the do file.
 */
 *******************************************************************************************************************************
 *******************************************************************************************************************************
@@ -205,7 +205,7 @@ insert file = "NT_MN_NUT.sps".
 
 insert file = "NT_tables_MR.sps".
 *Purpose: 	Produce tables for indicators computed from above sps files. 
-
+* Note:		This will drop any men not in 15-49 age range. You can change this selection. Please check the notes in the do file.
 */
 
 *******************************************************************************************************************************

@@ -10,9 +10,8 @@ Date last modified: October 19 2019 by Ivana Bjelic
 	2.	Tables_assets_mn:	Contains the tables for asset ownwership indicators for men
 	3.	Tables_empw_mn:	Contains the tables for empowerment indicators, justification of wife beating, and decision making for men
 *
-Notes:		For men, the tables are produced according to the age group identified in the WE_ASSETS_MR and the WE_EMPW_MR sps files. Currently it is for men 15-49 by default
-		This can be changed in the sps files that constuct the indicators. 
-*	
+Notes:		For men the indicators are outputed for age 15-49 in line 26. 
+*This can be commented out if the indicators are required for all men.	
 *****************************************************************************************************/
 * the total will show on the last row of each table.
 * comment out the tables or indicator section you do not want.
@@ -22,6 +21,9 @@ Notes:		For men, the tables are produced according to the age group identified i
     ctables to *ctables.
    *crosstabs to crosstabs
    *frequencies to frequencies.
+
+* limiting to men age 15-49.
+select if not(mv012<15 | mv012>49).
 
 compute wt=mv005/1000000.
 

@@ -43,10 +43,10 @@ get file =  datapath + "\"+ irdata + ".sav".
 
 insert file = "RC_CHAR_IR.sps".
 *Purpose: 	Code respondent characteristic indicators for women
-* Note:		This will drop any women over age 49. You can change this selection. Please check the notes in the do file.
 
 insert file = "RC_tables_IR.sps".
 *Purpose: 	Produce tables for indicators computed from RC_CHAR.do file. 
+* Note:		This will drop any women not in 15-49 age range. You can change this selection. Please check the notes in the do file.
 */
 *******************************************************************************************************************************
 *******************************************************************************************************************************
@@ -58,10 +58,10 @@ get file =  datapath + "\"+ mrdata + ".sav".
 
 insert file = "RC_CHAR_MR.sps".
 *Purpose: 	Code respondent characteristic indicators for men
-* Note:		This will drop any men over age 49. You can change this selection. Please check the notes in the do file.
 
 insert file = "RC_tables_MR.sps".
 *Purpose: 	Produce tables for indicators computed from RC_CHAR.do file. 
+* Note:		This will drop any men not in 15-49 age range. You can change this selection. Please check the notes in the do file.
 */
 *******************************************************************************************************************************
 *******************************************************************************************************************************

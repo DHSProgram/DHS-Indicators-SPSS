@@ -5,7 +5,7 @@ Purpose: 			produce tables for child mortality and perinatal mortality
 Author:			Ivana Bjelic
 Date last modified: December 12 2020 by Ivana Bjelic
 
-*Note this do file will produce the following tables in excel:
+*This do file will produce the following tables in excel:
 	1. 	Tables_child_mort:	Contains the child mortality tables (Tables 1-3 in Chapter 8). See Table variable for the table number	
 	2. 	Tables_PMR:	Contains the tables perinatal mortality. You need to multiply the rates in the tables by 10 to get the correct rate. 
 *****************************************************************************************************/

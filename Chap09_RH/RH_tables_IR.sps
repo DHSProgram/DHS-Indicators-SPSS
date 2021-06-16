@@ -5,17 +5,23 @@ Purpose: 			produce tables for indicators
 Author:				Ivana Bjelic
 Date last modified: July 16 2019 by Ivana Bjelic
 
-*Note this do file will produce the following tables in excel:
+*This do file will produce the following tables in excel:
 	1. 	Tables_ANCvisits:	Contains the tables for ANC provider, ANC skilled provider, ANC number of visits, and timing of ANC visit by background variables
 	2.	Tables_ANCcomps: 	Contains tables for all ANC components
-  	3.	Tables_Probs: 	Contains the tables for problems accessing health care
+ 3.	Tables_Probs: 	Contains the tables for problems accessing health care
 	4.	Tables_PNC:	Contains the tables for the PNC indicators for women and newborns
+
+*Notes: For women the indicators are outputed for age 15-49 in line 30. 
+*This can be commented out if the indicators are required for all women.		
 ***********************************************************************************************************************************************************************************************************/
 
 *  When implementing a crosstabs command instead of ctables command please change:
     ctables to *ctables.
    *crosstabs to crosstabs
    *frequencies to frequencies.
+
+* limiting to women age 15-49.
+select if not(v012<15 | v012>49).
 
 compute wt=v005/1000000.
 

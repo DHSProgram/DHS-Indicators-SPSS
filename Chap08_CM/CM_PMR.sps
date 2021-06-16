@@ -2,7 +2,7 @@
 *****************************************************************************************************
 Program: 			CM_PMR.sps
 Purpose: 			Code to compute perinatal mortality 
-Data inputs: 		IR survey list
+Data inputs: 		IR dataset
 Data outputs:		coded variables
 Author:			Trevor Croft and modified by Ivana Bjelic for the code share project
 Date last modified:                           December 09 2020 by Ivana Bjelic

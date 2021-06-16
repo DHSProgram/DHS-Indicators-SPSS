@@ -5,9 +5,11 @@ Purpose: 			produce tables for indicators
 Author:				Ivana Bjelic
 Date last modified: December 2, 2020 by Ivana Bjelic
 
-*Note this do file will produce the following tables in excel:
-Tables_FIST:		Contains the tables for heard of female circumcision among women and men 
-	
+*This do file will produce the following table in excel:
+Tables_FIST:		Contains the tables for fistula indicators
+
+*Notes: 	The indicators are outputed for women age 15-49 in line 25. 
+*This can be commented out if the indicators are required for all women.	
 *****************************************************************************************************/
 
 * the total will show on the last row of each table.
@@ -18,16 +20,14 @@ Tables_FIST:		Contains the tables for heard of female circumcision among women a
     ctables to *ctables.
    *crosstabs to crosstabs
    *frequencies to frequencies.
-*
-
-* indicators from IR file.
-
-compute wt=v005/1000000.
-weight by wt.
 
 *select age group.
 select if v012>=15 or v012<=49.
 
+compute wt=v005/1000000.
+weight by wt.
+
+* indicators from IR file.
 **************************************************************************************************
 *Heard of fistula.
 ctables

@@ -2,7 +2,7 @@
 *****************************************************************************************************
 Program: 			HV_CIRCUM.sps
 Purpose: 			Code for Circumcision and HIV
-Data inputs: 		MR survey list
+Data inputs: 		MR dataset
 Data outputs:		coded variables
 Author:				Shireen Assaf and translated to SPSS by Ivana Bjelic
 Date last modified: March 31, 2020 by Ivana Bjelic

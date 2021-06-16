@@ -7,10 +7,10 @@ Author:				Ivana Bjelic
 Date last modified: September 02 2019 by Ivana Bjelic
                     March 25 2021 by Trevor Croft to correct spelling of Pneumococcal
 
-*Note this do file will produce the following tables in excel:
-	1. 	Tables_Vac:		Contains the tables for child's vaccination indicators
-*	
-	Note:	These tables will be produced for the age group selection in the CH_VAC.do file
+*This do file will produce the following table in excel:
+Tables_Vac:		Contains the tables for child's vaccination indicators
+	
+*Note:	These tables will be produced for the age group selection in the CH_VAC.do file
 			The default section is children 12-23 months. If estimates are requried for children 24-35 months, 
 			the CH_VAC.do file needs to be run again with that age group selection and then this do file to produce files
 			can be run agian. 

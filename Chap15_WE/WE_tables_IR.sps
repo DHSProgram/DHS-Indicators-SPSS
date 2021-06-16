@@ -5,23 +5,27 @@ Purpose: 			produce tables for indicators
 Author:				Ivana Bjelic
 Date last modified: October 19 2019 by Ivana Bjelic
 
-*Note this do file will produce the following tables in excel:
-	1. 	Tables_emply_wm:	Contains the tables for employment and earning indicators for women
-	2 	Tables_assets_wm:	Contains the tables for asset ownwership indicators for women
-	3. 	Tables_empw_wm:	Contains the tables for empowerment indicators, justification of wife beating, and decision making for women
+*This do file will produce the following tables in excel:
+1. 	Tables_emply_wm:	Contains the tables for employment and earning indicators for women
+2. 	Tables_assets_wm:	Contains the tables for asset ownwership indicators for women
+3. 	Tables_empw_wm:	Contains the tables for empowerment indicators, justification of wife beating, and decision making for women
 *
-Notes:	Please see note on line 721 for constructing addition tables for the empowerment indicators*	
-	Please check note on line 697 and 704. Only the first column for the first crosstabulation and the last column for the second crosstabulation are reported in the final report. 
+Notes:	For women the indicators are outputed for age 15-49 in line 30. 
+*This can be commented out if the indicators are required for all women.		
+
+*Please see note on line 725 for constructing addition tables for the empowerment indicators*	
+	Please check note on line 701 and 705. Only the first column for the first crosstabulation and the last column for the second crosstabulation are reported in the final report. 
 *****************************************************************************************************/
 * the total will show on the last row of each table.
 * comment out the tables or indicator section you do not want.
 ****************************************************
-
 *  When implementing a crosstabs command instead of ctables command please change:
     ctables to *ctables.
    *crosstabs to crosstabs
    *frequencies to frequencies.
 
+* limiting to women age 15-49.
+select if not(v012<15 | v012>49).
 
 compute wt=v005/1000000.
 

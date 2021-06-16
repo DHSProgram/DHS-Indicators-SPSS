@@ -2,7 +2,7 @@
 *******************************************************************************
 Program: 			FE_INT.sps
 Purpose: 			Code fertility indicators from birth history reflecting birth intervals 
-Data inputs: 		BR data files
+Data inputs: 		BR dataset
 Data outputs:		coded variables
 Author:				Courtney Allen and translated to SPSS by Ivana Bjelic
 Date last modified: September 30, 2020 by Ivana Bjelic

@@ -2,12 +2,12 @@
 ******************************************************************************************************
 Program: 			CH_VAC.sps
 Purpose: 			Code vaccination variables.
-Data inputs: 		KR survey list
+*Data inputs: 		KR dataset
 Data outputs:		coded variables
 Author:				Shireen Assaf and translated to SPSS by Ivana Bjelic
 Date last modified: September 02 2019 by Ivana Bjelic. 
-                    March 26 2021 by Trevor Croft to correct coding of the vaccination variables and the spelling of Pneumococcal
- * Notes:				Estimates can be created for two age groups (12-23) and (24-35). 
+*                    March 26 2021 by Trevor Croft to correct coding of the vaccination variables and the spelling of Pneumococcal
+*Notes:				Estimates can be created for two age groups (12-23) and (24-35). 
 					
  * 					!! Please choose the age group of interest in line 100.
 					

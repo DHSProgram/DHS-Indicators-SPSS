@@ -5,7 +5,7 @@ Purpose: 			produce tables for indicators
 Author:				Ivana Bjelic
 Date last modified: Aug 18 2019 by Ivana Bjelic
 
-*Note this do file will produce the following tables in excel:
+*This do file will produce the following tables in excel:
 	1. 	Tables_Know_mn:		Contains the tables for knowledge indicators for men
 	2.               Tables_message_mn:	                  Contains the tables for exposure for FP messages for men
 
@@ -13,9 +13,10 @@ Date last modified: Aug 18 2019 by Ivana Bjelic
  * Notes: 					For knowledge of contraceptive methods, ever use, current use, and unmet need variables, the population of
 						interest can be selected (all women, currently married women, and sexually active women).
  * 						The reminaing indicators are reported for currently married women.
+ * 						Make the secltion of the population of interest below (line 38) for MR files. 
 
- * 						Make the secltion of the population of interest below for MR files. 
-
+*Notes: For men the indicators are outputed for age 15-49 in line 32. 
+*This can be commented out if the indicators are required for all men.		
 *****************************************************************************************************/
 
 * the total will show on the last row of each table.
@@ -27,15 +28,14 @@ Date last modified: Aug 18 2019 by Ivana Bjelic
    *crosstabs to crosstabs
    *frequencies to frequencies.
 
-****************************************************************************
-****************************************************************************
+* limiting to men age 15-49.
+select if not(mv012<15 | mv012>49).
 
 compute wt=mv005/1000000.
 
 weight by wt.
 
 ** Select population of interest.
-
 *all men.
 compute select=1.
 

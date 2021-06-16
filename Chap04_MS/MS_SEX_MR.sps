@@ -2,7 +2,7 @@
 *******************************************************************************
 Program: 			MS_SEX_MR.sps
 Purpose: 			Code to create sexual activity indicators
-Data inputs: 		MR survey list
+Data inputs: 		MR dataset
 Data outputs:		coded variables and scalars
 Author:			Courtney Allen and translated to SPSS by Ivana Bjelic
 Date last modified: October 07, 2019 by Ivana Bjelic

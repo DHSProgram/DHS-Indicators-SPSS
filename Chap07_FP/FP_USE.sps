@@ -2,7 +2,7 @@
  * /*****************************************************************************************************
 Program: 			FP_USE.sps
 Purpose: 			Code contraceptive use indicators (ever and current use). Also source of method, brands, and information given. 
- * Data inputs: 		IR survey list
+ * Data inputs: 		IR dataset
 Data outputs:		coded variables
 Author:				Shireen Assaf and translated to SPSS by Ivana Bjelic
 Date last modified: August 13 2019 by Ivana Bjelic 

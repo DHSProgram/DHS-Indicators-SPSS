@@ -2,13 +2,11 @@
 *****************************************************************************************************
 Program: 			HK_TEST_CONSL_MR.sps
 Purpose: 			Code for indicators on HIV prior testing and counseling 
-Data inputs: 		MR survey list
+Data inputs: 		MR dataset
 Data outputs:		coded variables
 Author:				Shireen Assaf and translated to SPSS by Ivana Bjelic
 Date last modified: Nov 29, 2019 by Ivana Bjelic
-Note:				The indicators below can be computed for men and women. 
-*					For men the indicators are computed for age 15-49 in line 29. 
-*					This can be commented out if the indicators are required for all men.
+Note:				The indicators below can be computed for men and women. No age selection is made here.
 			
 *****************************************************************************************************.
 
@@ -24,9 +22,6 @@ hk_hiv_selftest_use		"Ever used a HIV self-test kit"
 ---------------------------------------------------------------------------.
 
 * indicators from MR file.
-
-* limiting to men age 15-49.
-select if mv012<=49.
 
 *** Coverage of Prior HIV Testing ***
 

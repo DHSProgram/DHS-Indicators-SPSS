@@ -2,7 +2,7 @@
 *****************************************************************************************************
 Program: 			FG_CIRCUM_IR.sps
 Purpose: 			Code to 
-Data inputs: 		IR survey list
+Data inputs: 		IR dataset
 Data outputs:		coded variables
 Author:				Shireen Assaf and translated to SPSS by Ivana Bjelic
 Date last modified: October 27, 2020 by Shireen Assaf 

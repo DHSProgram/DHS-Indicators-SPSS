@@ -2,13 +2,11 @@
 *****************************************************************************************************
 Program: 			HK_TEST_CONSL_IR.sps
 Purpose: 			Code for indicators on HIV prior testing and counseling 
-Data inputs: 		IR survey list
+Data inputs: 		IR dataset
 Data outputs:		coded variables
 Author:				Shireen Assaf and translated to SPSS by Ivana Bjelic
 Date last modified: Nov 29, 2019 by Ivana Bjelic
-Note:				The indicators below can be computed for men and women. 
-*					For women the indicators are computed for age 15-49 in line 39. 
-*					This can be commented out if the indicators are required for all women.
+Note:				The indicators below can be computed for men and women. No age selection is made here.
 			
 *****************************************************************************************************.
 
@@ -34,9 +32,6 @@ hk_test_anclbr_result     	"Received HIV test during ANC visit or labor but did 
 ----------------------------------------------------------------------------.
 
 * indicators from IR file.
-
-* limiting to women age 15-49.
-select if v012<=49.
 
 *** Coverage of Prior HIV Testing ***
 

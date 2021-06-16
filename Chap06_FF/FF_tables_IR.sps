@@ -8,6 +8,8 @@ Date last modified: September 20 2019 by Ivana Bjelic
 *Note this do file will produce the following tables in excel:
 	1. 	Tables_Pref_wm:	Contains tables for fertility preferences for women 
 	
+*Notes: For women the indicators are outputed for age 15-49 in line 25. 
+*This can be commented out if the indicators are required for all women.			
 *****************************************************************************************************.
 
 * the total will show on the last row of each table.
@@ -19,6 +21,9 @@ Date last modified: September 20 2019 by Ivana Bjelic
    *crosstabs to crosstabs
    *frequencies to frequencies.
 
+* limiting to women age 15-49.
+select if not(v012<15 | v012>49).
+
 compute wt=v005/1000000.
 
 weight by wt.
@@ -26,7 +31,6 @@ weight by wt.
 * create denominators.
 compute num=1.
 variable labels num "Number".
-
 
 **************************************************************************************************
 * Indicators for fertilty preferences

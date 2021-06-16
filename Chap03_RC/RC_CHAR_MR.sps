@@ -7,7 +7,6 @@ Data outputs:		coded variables
 Author:				Shireen Assaf and translated to SPSS by Ivana Bjelic
 Date last modified: October 17 2019 by Ivana Bjelic
 Note:				The indicators below can be computed for men and women
-					For men the indicator is computed for age 15-49 in line 55. This can be commented out if the indicators are required for all men
 					Please check the note on health insurance. This can be country specific and also reported for specific populations. 
 *****************************************************************************************************/
 
@@ -50,9 +49,6 @@ rc_tobc_any			"Uses any type of tobacco - smoke or smokeless"
 ----------------------------------------------------------------------------*/
 
 * indicators from MR file.
-
-* limiting to men age 15-49.
-select if (mv012<=49).
 
 *** Education ***.
 

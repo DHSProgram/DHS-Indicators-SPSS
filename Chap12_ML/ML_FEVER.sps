@@ -2,7 +2,7 @@
 *****************************************************************************************************
 Program: 			ML_FEVER.sps
 Purpose: 			Code indicators on fever, fever care-seeking, and antimalarial drugs
-Data inputs: 		KR survey list
+Data inputs: 		KR dataset
 Data outputs:		coded variables
 Author:			Shireen Assaf and Cameron Taylor, , translated to SPSS by Ivana Bjelic
 Date last modified: August 31 by Ivana Bjelic

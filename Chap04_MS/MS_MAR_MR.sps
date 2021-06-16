@@ -2,7 +2,7 @@
 *******************************************************************************
 Program: 			MS_MAR_MR.sps
 Purpose: 			Code to create marital indicators
-Data inputs: 		MR survey list
+Data inputs: 		MR dataset
 Data outputs:		coded variables and scalars
 Author:				Thomas Pullum and Courtney Allen, translated to SPSS by Ivana Bjelic
 Date last modified: October 08, 2019 by Ivana Bjelic

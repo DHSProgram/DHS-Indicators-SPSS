@@ -5,7 +5,7 @@ Purpose: 			produce tables for high risk birth and high risk fertility behavior
 Author:			Ivana Bjelic
 Date last modified: September 23, 2019 by Ivana Bjelic
 
-*Note this do file will produce the following tables in excel:
+*This do file will produce the following tables in excel:
 	1. 	Table_Risk_birth:	Contains the tables of high risk births indicators
 *****************************************************************************************************.
 

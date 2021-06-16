@@ -5,12 +5,12 @@ Purpose: 			produce tables for indicators
 Author:				Ivana Bjelic
 Date last modified: August 26 2020 by Ivana Bjelic
 
-*Note this do file will produce the following tables in excel:
+*This do file will produce the following tables in excel:
 	1. 	Tables_hh_wash:		Contains the table for WASH (water and santitation) indicators
 	2. 	Tables_hh_charac:		Contains the table for household characteristics
 	3. 	Tables_hh_poss:		Contains the table for household possessions
-*
-Notes: 					 						
+
+*Notes: 					 						
 *****************************************************************************************************
 
 * the total will show on the last row of each table.

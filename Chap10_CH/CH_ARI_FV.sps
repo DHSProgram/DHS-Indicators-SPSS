@@ -2,7 +2,7 @@
 *****************************************************************************************************
 Program: 			CH_ARI_FV.sps
 Purpose: 			Code ARI and fever variables
-Data inputs: 		KR survey list
+Data inputs: 		KR dataset
 Data outputs:		coded variables
 Author:				Shireen Assaf and translated to SPSS by Ivana Bjelic
 Date last modified: September 01 by Ivana Bjelic

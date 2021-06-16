@@ -58,6 +58,8 @@ insert file = "FG_CIRCUM_IR.sps".
 
 insert file = "FG_tables_IR.sps".
 *Purpose: 	Produce tables for indicators computed from the above do files.
+* Note:		This will drop any women not in 15-49 age range. You can change this selection. Please check the notes in the do file.
+
 */
 *******************************************************************************************************************************
 
@@ -95,6 +97,7 @@ insert file = "FG_CIRCUM_MR.sps".
 
 insert file = "FG_tables_MR.sps".
 *Purpose: 	Produce tables for indicators computed from the above do files.
+* Note:		This will drop any men not in 15-49 age range. You can change this selection. Please check the notes in the do file.
 */
 
 

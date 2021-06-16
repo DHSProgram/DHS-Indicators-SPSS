@@ -2,13 +2,11 @@
 *****************************************************************************************************
 Program: 			HK_STI_IR.sps
 Purpose: 			Code for STI indicators
-Data inputs: 		IR survey list
+Data inputs: 		IR dataset
 Data outputs:		coded variables
 Author:				Shireen Assaf and translated to SPSS by Ivana Bjelic
 Date last modified: Nov 28, 2019 by Ivana Bjelic
-Note:				The indicators below can be computed for men and women. 
-*					For women the indicators are computed for age 15-49 in line 30. 
-*					This can be commented out if the indicators are required for all women.
+Note:				The indicators below can be computed for men and women. No age selection is made here.
 			
 *****************************************************************************************************/
 
@@ -25,9 +23,6 @@ hk_sti_notrt		                  "Had an STI or STI symptoms in the past 12 month
 ----------------------------------------------------------------------------.
 
 * indicators from IR file.
-
-* limiting to women age 15-49.
-select if v012<=49.
 
 **************************
 

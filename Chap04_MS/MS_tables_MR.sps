@@ -5,12 +5,12 @@ Purpose: 			produce tables for indicators
 Author:				Ivana Bjelic
 Date last modified: Sept 29 2019 by Ivana Bjelic
 
-*Note this do file will produce the following tables in excel:
+*This do file will produce the following tables in excel:
 	1. 	Tables_Mar_mn:		Contains the tables for knowledge indicators for men
 	2. 	Tables_Sex_mn:		Contains the tables for current use of family planning for women + timing of sterlization
 
-*
-Notes: 
+*Notes: For men the indicators are outputed for age 15-49 in line 25. 
+*This can be commented out if the indicators are required for all men.	
 *****************************************************************************************************.
 
 * the total will show on the last row of each table.
@@ -21,12 +21,13 @@ Notes:
     ctables to *ctables.
    *crosstabs to crosstabs.
 
-* indicators from MR file.
+* limiting to men age 15-49.
+select if not(mv012<15 | mv012>49).
 
 compute wt=mv005/1000000.
 weight by wt.
 
-
+*indicators from MR file.
 **************************************************************************************************
 * Indicators for marriage: excel file Tables_Mar_mn will be produced
 **************************************************************************************************.

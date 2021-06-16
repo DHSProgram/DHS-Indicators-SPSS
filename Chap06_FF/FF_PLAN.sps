@@ -3,7 +3,7 @@
 *****************************************************************************************************
 Program: 			FF_Want.sps
 Purpose: 			Code to compute fertility planning status in women
-Data inputs: 		IR survey list
+Data inputs: 		IR dataset
 Data outputs:		coded variables
 Author:				Thomas Pullum, modified by Shireen Assaf for the code share project and translated to SPSS by Ivana Bjelic
 Date last modified: September 09 2019 by Ivana Bjelic

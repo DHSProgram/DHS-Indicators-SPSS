@@ -2,7 +2,7 @@
 *****************************************************************************************************
 Program: 			WE_EMPW_IR.sps
 Purpose: 			Code to compute decision making and justification of violence among in men and women
-Data inputs: 		IR or MR survey list
+Data inputs: 		IR or MR dataset
 Data outputs:		coded variables
 Author:				Shireen Assaf and translated to SPSS by Ivana Bjelic
 Date last modified: Oct 19, 2019 by Ivana Bjelic
@@ -16,9 +16,9 @@ Variables created in this file:
 we_decide_health			"Decides on own health care"
 we_decide_hhpurch			"Decides on large household purchases"
 we_decide_visits			"Decides on visits to family or relatives"
-we_decide_health_self	                    	"Decides on own health care either alone or jointly with partner"
+we_decide_health_self	   "Decides on own health care either alone or jointly with partner"
 we_decide_hhpurch_self    		"Decides on large household purchases either alone or jointly with partner"
-we_decide_visits_self                                         "Decides on visits to family or relatives either alone or jointly with partner"
+we_decide_visits_self      "Decides on visits to family or relatives either alone or jointly with partner"
 we_decide_all			"Decides on all three: health, purchases, and visits  either alone or jointly with partner" (for women)
 				"Decides on both health and purchases either alone or jointly with partner" (for men)
 we_decide_none			"Does not decide on any of the three decisions either alone or jointly with partner" (for women)
@@ -27,13 +27,13 @@ we_decide_none			"Does not decide on any of the three decisions either alone or 
 we_dvjustify_burn			"Agree that husband is justified in hitting or beating his wife if she burns food"
 we_dvjustify_argue			"Agree that husband is justified in hitting or beating his wife if she argues with him"
 we_dvjustify_goout			"Agree that husband is justified in hitting or beating his wife if she goes out without telling him"
-we_dvjustify_neglect	                    	"Agree that husband is justified in hitting or beating his wife if she neglects the children"
-we_dvjustify_refusesex		                  "Agree that husband is justified in hitting or beating his wife if she refuses to have sexual intercourse with him"
-we_dvjustify_onereas            		"Agree that husband is justified in hitting or beating his wife for at least one of the reasons"
+we_dvjustify_neglect	 	"Agree that husband is justified in hitting or beating his wife if she neglects the children"
+we_dvjustify_refusesex		 "Agree that husband is justified in hitting or beating his wife if she refuses to have sexual intercourse with him"
+we_dvjustify_onereas  "Agree that husband is justified in hitting or beating his wife for at least one of the reasons"
 *	
-we_justify_refusesex    			"Believe a woman is justified to refuse sex with her husband if she knows he's having sex with other women"
-we_justify_cond                		"Believe a women is justified in asking that her husband to use a condom if she knows that he has an STI"
-we_havesay_refusesex    		"Can say no to their husband if they do not want to have sexual intercourse"
+we_justify_refusesex    "Believe a woman is justified to refuse sex with her husband if she knows he's having sex with other women"
+we_justify_cond     	"Believe a women is justified in asking that her husband to use a condom if she knows that he has an STI"
+we_havesay_refusesex  "Can say no to their husband if they do not want to have sexual intercourse"
 we_havesay_condom			"Can ask their husband to use a condom"
 *
 we_num_decide			"Number of decisions made either alone or jointly with husband among women currently in a union"
@@ -41,10 +41,8 @@ we_num_justifydv			"Number of reasons for which wife beating is justified among 
 ----------------------------------------------------------------------------*.
 
 * indicators from IR file.
-* limiting to women age 15-49.
-select if (v012<=49).
 
-*** Deciion making ***
+*** Decision making ***
 
 *Decides on own health.
 if v502=1 we_decide_health= v743a.

@@ -5,9 +5,8 @@ Purpose: 			produce tables for indicators
 Author:				Ivana Bjelic
 Date last modified: March 31 2020 by Ivana Bjelic
 
-*Note this do file will produce the following tables in excel:
-	1.	Tables_prev_cpl:	Contains the tables for HIV prevalence for couples
-*
+*This do file will produce the following table in excel:
+Tables_prev_cpl:	Contains the tables for HIV prevalence for couples
 		
 *****************************************************************************************************.
 * the total will show on the last row of each table.

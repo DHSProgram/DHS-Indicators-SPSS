@@ -2,7 +2,7 @@
 *****************************************************************************************************
 Program: 			DV_cntrl.sps
 Purpose: 			Code marital control  indicators from the IR file
-Data inputs: 		IR data files
+Data inputs: 		IR dataset
 Data outputs:		coded variables
 Author:				Courtney Allen and translated to SPSS by Ivana Bjelic
 Date last modified: September 16 2020

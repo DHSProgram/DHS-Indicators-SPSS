@@ -2,7 +2,7 @@
 *****************************************************************************************************
 Program: 			FF_PREF_IR.sps
 Purpose: 			Code to compute fertility preferences in men and women
-Data inputs: 		IR survey list
+Data inputs: 		IR dataset
 Data outputs:		coded variables
 Author:				Shireen Assaf and translated to SPSS by Ivana Bjelic
 Date last modified: September 08 2019 by Ivana Bjelic 

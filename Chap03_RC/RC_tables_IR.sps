@@ -5,7 +5,7 @@ Purpose: 			produce tables for indicators
 Author:				Ivana Bjelic
 Date last modified: October 17 2019 by Ivana Bjelic
 
-*Note this do file will produce the following tables in excel:
+*This do file will produce the following tables in excel:
 	1. 	 Tables_background_wm:	Contains the tables for background variables for women
 	2. 	 Tables_educ_wm:		Contains the tables for education indicators for women
 	3.	 Tables_media_wm:		Contains the tables for media exposure and internet use for women
@@ -13,8 +13,8 @@ Date last modified: October 17 2019 by Ivana Bjelic
 	5.                Tables_insurance_wm:		Contains the tables for health insurance indicators for women
 	6.                Tables_tobac_wm:		Contains the tables for tobacco use indicators for women
 
-*
-Notes: 					 						
+*Notes: For women the indicators are outputed for age 15-49 in line 30. 
+*This can be commented out if the indicators are required for all women.			: 					 						
 *****************************************************************************************************.
 
 * the total will show on the last row of each table.
@@ -25,6 +25,9 @@ Notes:
     ctables to *ctables.
    *crosstabs to crosstabs
    *frequencies to frequencies.
+
+* limiting to women age 15-49.
+select if not(v012<15 | v012>49).
 
 compute wt=v005/1000000.
 

@@ -5,9 +5,9 @@ Purpose: 			produce tables for indicators
 Author:				Ivana Bjelic
 Date last modified: May 18 2020 by Ivana Bjelic
 
-*Note this do file will produce the following tables in excel:
+*This do file will produce the following tables in excel:
 	1.	Tables_IYCF:	Contains the tables for IYCF indicators in children
-	2. 	Tables_micronut_ch:	Contains the tables for micronutrient intake in children
+	2. Tables_micronut_ch:	Contains the tables for micronutrient intake in children
 *****************************************************************************************************
 
 *  When implementing a crosstabs command instead of ctables command please change:

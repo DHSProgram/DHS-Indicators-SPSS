@@ -2,13 +2,11 @@
 *****************************************************************************************************
 Program: 			HK_KNW_ATD_IR.sps
 Purpose: 			Code to compute HIV-AIDS related knowledge and attitude indicators 
-Data inputs: 		IR survey list
+Data inputs: 		IR dataset
 Data outputs:		coded variables
 Author:				Shireen Assaf and translated to SPSS by Ivana Bjelic
 Date last modified: November 28, 2019 by Ivana Bjelic
-Note:				The indicators below can be computed for men and women. 
-*					For women the indicators are computed for age 15-49 in line 44. 
-*					This can be commented out if the indicators are required for all women.
+Note:				The indicators below can be computed for men and women. No age selection is made here.
 					
 *					Indicator hk_knw_hiv_hlth_2miscp (line 88) is country specific, please check the final report for the two most common misconceptions. 
 *					Currently coded as rejecting that HIV can be transmitted by mosquito bites and supernatural means.
@@ -24,7 +22,7 @@ hk_knw_hiv_hlth		"Know that a healthy looking person can have HIV"
 hk_knw_hiv_mosq		"Know that HIV cannot be transmitted by mosquito bites"
 hk_knw_hiv_supernat		"Know that HIV cannot be transmitted by supernatural means"
 hk_knw_hiv_food		"Know that cannot become infected by sharing food with a person who has HIV"
-hk_knw_hiv_hlth_2miscp	                  "Know that a healthy looking person can have HIV and reject the two most common local misconceptions"
+hk_knw_hiv_hlth_2miscp	"Know that a healthy looking person can have HIV and reject the two most common local misconceptions"
 hk_knw_comphsv		"Have comprehensive knowledge about HIV"
 *	
 hk_knw_mtct_preg		"Know that HIV mother to child transmission can occur during pregnancy"
@@ -39,9 +37,6 @@ hk_atd_discriminat		"Have discriminatory attitudes towards people living with HI
 ----------------------------------------------------------------------------.
 
 * indicators from IR file.
-
-* limiting to women age 15-49.
-select if v012<=49.
 
 *** HIV related knowledge ***
 *Ever heard of HIV/AIDS.

@@ -5,8 +5,7 @@ Purpose: 			produce tables for indicators with the denominator of the youngest c
 Author:				Ivana Bjelic
 Date last modified: May 18 2020 by Ivana Bjelic
 
-*Note this do file will produce the following tables in excel:
-
+*This do file will produce the following tables in excel:
 *These tables will append to the same excel files produced in NT_tables.sps
 *
 	1. 	Tables_brst_fed:	Contains the tables for breastfeeding indicators

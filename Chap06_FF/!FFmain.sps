@@ -48,6 +48,7 @@ insert file = "FF_PREF_IR.sps".
 
 insert file = "FF_tables_IR.sps".
 *Purpose: 	Produce tables for indicators computed from FF_PREF.sps file. 
+* Note:		This will drop any women not in 15-49 age range. You can change this selection. Please check the notes in the do file.
 
 insert file = "FF_PLAN.sps".
 *Purpose: 	Code fertility planning status indicator and produce table Table_FFplan.
@@ -68,6 +69,7 @@ insert file = "FF_PREF_MR.sps".
 
 insert file = "FF_tables_MR.sps".
 *Purpose: 	Produce tables for indicators computed from above sps files. 
+* Note:		This will drop any men not in 15-49 age range. You can change this selection. Please check the notes in the do file.
 
 */
 *******************************************************************************************************************************
