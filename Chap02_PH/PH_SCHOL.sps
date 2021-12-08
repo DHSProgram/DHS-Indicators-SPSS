@@ -6,6 +6,7 @@ Data inputs: 		BR and PR dataset
 Data outputs:		coded variables
 Author:				Trevor Croft, translated to SPSS by Ivana Bjelic
 Date last modified: August 11, 2020 by Ivana Bjelic
+                    December 1, 2021 by Trevor Croft
 Note:				To produce the net attendance ratios you need to provide country specific information on the year and month of the school calendar and the age range for school attendance. See lines 65-75
 *****************************************************************************************************/
 
@@ -69,16 +70,17 @@ select if hv103=1 and range(hv105,5,24).
 * but first we have to specify the month and year of the start of the school year referred to in the survey.
 * example, for Zimbabwe 2015 survey this was January 2015.
 compute school_start_yr = 2015.
-compute school_start_mo = 9.
+compute school_start_mo = 1.
 * also need the age ranges for primary and secondary.
 * example, for Zimbabwe 2015, the age range is 6-12 for primary school and 13-18 for secondary school.
 compute age_prim_min = 6.
-compute age_prim_max = 13.
-compute age_sec_min = 14.
-compute age_sec_max = 17.
+compute age_prim_max = 12.
+compute age_sec_min = 13.
+compute age_sec_max = 18.
 
 * produce century month code of start of school year for each state and phase.
 compute cmcSch = (school_start_yr - 1900)*12 + school_start_mo.
+if (hv008 >= cmcSch+12) cmcSch = cmcSch+12.
 * calculate the age at the start of the school year, using the date of birth from the birth history if we have it.
 if not sysmis(b3) school_age = trunc((cmcSch - b3) / 12).
 * Impute an age at the beginning of the school year when CMC of birth is unknown.
@@ -103,7 +105,7 @@ weight by wt.
 * NAR is just the proportion attending primary/secondary school of children in the correct age range, for de facto children.
 if prim_age = 1 nar_prim = prim.
 if sec_age  = 1 nar_sec  = sec.
-variable labels nar_prim	"Primary school net attendance ratio (NAR)".
+variable labels nar_prim "Primary school net attendance ratio (NAR)".
 variable labels nar_sec	"Secondary school net attendance ratio (NAR)".
 
 * tabulate primary school attendance.
@@ -157,7 +159,7 @@ variable labels !concat ("ph_sch_nar_",!sch,"_",!backvar,"_1") !concat("NAR for 
 variable labels !concat ("ph_sch_nar_",!sch,"_",!backvar,"_2") !concat("NAR for ",!sch, " education for background characteristic ", !backvar, " for ", females). 
 
 *gender parity index for a rate for a characteristic - female (2) rate divided by male (1) rate.
-compute !concat("ph_sch_nar_",!sch,"_",!backvar,"_gpi")  = 100 * !concat ('ph_sch_nar_',!sch,'_',!backvar,"_2") / !concat ('ph_sch_nar_',!sch,'_',!backvar,"_1").
+compute !concat("ph_sch_nar_",!sch,"_",!backvar,"_gpi") = !concat ('ph_sch_nar_',!sch,'_',!backvar,"_2") / !concat ('ph_sch_nar_',!sch,'_',!backvar,"_1").
 variable labels !concat("ph_sch_nar_",!sch,"_",!backvar,"_gpi") !concat("gender parity index for NAR for ",!sch," education for background characteristic ",!backvar).
 
 !enddefine.
@@ -196,42 +198,36 @@ variable labels !concat ("ph_sch_gar_",!sch,"_",!backvar,"_1") !concat(!rate, " 
 variable labels !concat ("ph_sch_gar_",!sch,"_",!backvar,"_2") !concat(!rate, " for ",!sch, "education for background characteristic ", !backvar, " for ", females). 
 
 *gender parity index for a rate for a characteristic - female (2) rate divided by male (1) rate.
-compute !concat("ph_sch_gar_",!sch,"_",!backvar,"_gpi")  = 100 * !concat ('ph_sch_gar_',!sch,'_',!backvar,"_2") / !concat ('ph_sch_gar_',!sch,'_',!backvar,"_1").
+compute !concat("ph_sch_gar_",!sch,"_",!backvar,"_gpi") = !concat ('ph_sch_gar_',!sch,'_',!backvar,"_2") / !concat ('ph_sch_gar_',!sch,'_',!backvar,"_1").
 variable labels !concat("ph_sch_gar_",!sch,"_",!backvar,"_gpi") !concat("gender parity index for GAR for ",!sch," education for background characteristic ",!backvar).
 
 !enddefine.
 
 compute total = 0.
 variable labels total "Total".
+value labels total 0 "Total".
 
 * Caculate indicators and save them in the dataset.
-calc_nar sch=prim backvar=total .    /* NAR primary   - total population */
+calc_nar sch=prim backvar=total .  /* NAR primary   - total population */
 calc_nar sch=prim backvar=hv025 .  /* NAR primary   - urban/rural */
 calc_nar sch=prim backvar=hv024 .  /* NAR primary   - region */
 calc_nar sch=prim backvar=hv270 .  /* NAR primary   - wealth index */
 
-calc_nar sch=sec backvar=total .    /* NAR secondary   - total population */
+calc_nar sch=sec backvar=total .  /* NAR secondary   - total population */
 calc_nar sch=sec backvar=hv025 .  /* NAR secondary   - urban/rural */
 calc_nar sch=sec backvar=hv024 .  /* NAR secondary   - region */
 calc_nar sch=sec backvar=hv270 .  /* NAR secondary   - wealth index */
 
-calc_gar sch=prim backvar=total .    /* GAR primary   - total population */
+calc_gar sch=prim backvar=total .  /* GAR primary   - total population */
 calc_gar sch=prim backvar=hv025 .  /* GAR primary   - urban/rural */
 calc_gar sch=prim backvar=hv024 .  /* GAR primary   - region */
 calc_gar sch=prim backvar=hv270 .  /* GAR primary   - wealth index */
 
-calc_gar sch=sec backvar=total .    /* GAR secondary   - total population */
+calc_gar sch=sec backvar=total .  /* GAR secondary   - total population */
 calc_gar sch=sec backvar=hv025 .  /* GAR secondary   - urban/rural */
 calc_gar sch=sec backvar=hv024 .  /* GAR secondary   - region */
 calc_gar sch=sec backvar=hv270 .  /* GAR secondary   - wealth index */
 
-* generate the output variable we will fill.
-
-* Dividing GPI indicators by 100 .
-do repeat x = ph_sch_nar_prim_total_gpi ph_sch_nar_prim_hv025_gpi ph_sch_nar_prim_hv024_gpi ph_sch_nar_prim_hv270_gpi ph_sch_nar_sec_total_gpi ph_sch_nar_sec_hv025_gpi ph_sch_nar_sec_hv024_gpi ph_sch_nar_sec_hv270_gpi  
-                  ph_sch_gar_prim_total_gpi ph_sch_gar_prim_hv025_gpi ph_sch_gar_prim_hv024_gpi ph_sch_gar_prim_hv270_gpi ph_sch_gar_sec_total_gpi ph_sch_gar_sec_hv025_gpi ph_sch_gar_sec_hv024_gpi ph_sch_gar_sec_hv270_gpi.
-compute x=x/100. 
-end repeat.	
 
 *****************************************************************************************************
 *****************************************************************************************************
