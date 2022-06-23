@@ -126,7 +126,7 @@ value labels ph_wtr_trt_appr 0"No" 1"Yes".
 	
 *generate water source indicator.
 *--------------------------------------------------------------------------
-NOTE: this cycles t" and file2 = "ough ALL country specific coding and ends around line 2208
+NOTE: this cycles through ALL country specific coding and ends around line 2208
 --------------------------------------------------------------------------.
 
 do if file1 = "af" and file2 = "70".
