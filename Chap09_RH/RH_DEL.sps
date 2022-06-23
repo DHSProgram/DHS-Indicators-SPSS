@@ -121,7 +121,7 @@ value labels  rh_del_cestimeR 0 "Vaginal Birth" 1 "Caesarean section".
 	
 *Timing of decision for caesarean.
 do if (age < period and rh_del_place = 1 and bidx = 1 ).
-+ recode m61 (0 thru 105 = 1) (106 thru 111 = 2) (112 thru 123 , 200 = 3)(124 thru 171, 201, 202 = 4) (172 thru 197, 203 thru 297, 301 thru 397= 5) (198 199 298 299 398 399 998 999 = 9) (else=9) into rh_del_stay.
++ recode m61 (0 thru 105 = 1) (106 thru 111 =  2) (112 thru 123 , 200 = 3)(124 thru 171, 201, 202 = 4) (172 thru 197, 203 thru 297, 301 thru 397= 5) (198 199 298 299 398 399 998 999 = 9) (else=9) into rh_del_stay.
 end if.
 variable labels rh_del_stay "Duration of stay following recent birth".
 value labels rh_del_stay 
