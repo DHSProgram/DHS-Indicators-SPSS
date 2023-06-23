@@ -24,20 +24,20 @@ compute wt=v005/1000000.
 
 weight by wt.
 
-* Percentage of births with risk - among births in the 5 years precedig the survey.
+* Percentage of births with risk - among births in the 5 years preceding the survey.
 
 frequencies variables = cm_riskb_none cm_riskb_unavoid cm_riskb_any_avoid cm_riskb_u18 cm_riskb_o34 cm_riskb_interval cm_riskb_order 
 cm_riskb_any_single cm_riskb_mult1 cm_riskb_mult2 cm_riskb_mult3 cm_riskb_mult4 cm_riskb_mult5 cm_riskb_any_mult 
 cm_riskb_u18_avoid cm_riskb_o34_avoid cm_riskb_interval_avoid cm_riskb_order_avoid.
 
-* Risk ratios - among births in the 5 years precedig the survey.
+* Risk ratios - among births in the 5 years preceding the survey.
 get file = datapath + "\temp.sav".
 
 ctables
   /table cat by
          rr [s] [mean '' f5.2] 
   /titles title=
-    "Percentage of births with risk - among births in the 5 years precedig the survey".		
+    "Percentage of births with risk - among births in the 5 years preceding the survey".		
 
 * sort cases by cat.
 * split file by cat.
